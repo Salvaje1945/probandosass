@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 0 - RUTEO - RESETEO - GLOBALESs */
+/* 0 - RUTEO - RESETEO - GLOBALES */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 :root {
   font-size: 16px !important;
@@ -752,8 +752,8 @@ Arreglo para la altura de línea del logo de la cabecera */
 
 .footer__links--box--btn {
   width: 51px;
-  height: 35PX;
-  padding: 5px 5px;
+  height: 35px;
+  padding: 5px;
   border-left: 0;
   margin-left: 0;
 }
@@ -814,6 +814,7 @@ Arreglo para la altura de línea del logo de la cabecera */
   margin: 0;
 }
 
+/***FIN DE LA PLANTILLA***/
 @media only screen and (min-width: 960px) {
   .flex-4 {
     flex-flow: row nowrap;
@@ -876,7 +877,7 @@ Arreglo para la altura de línea del logo de la cabecera */
     text-align: right;
     background: none;
     height: auto;
-    padding: 0 5px 0 0;
+    padding-right: 5px;
   }
   .header__principal--menu ul li {
     text-transform: none;
@@ -938,7 +939,7 @@ Arreglo para la altura de línea del logo de la cabecera */
     padding-right: 10px;
   }
   .footer__links--box--form ul {
-    padding: 0 10px 0 0;
+    padding-right: 10px;
   }
   .footer__links--box--ipt {
     width: 290px !important;
@@ -1003,5 +1004,4 @@ Arreglo para la altura de línea del logo de la cabecera */
   .contenido__bienvenida--txt p {
     line-height: 1.5;
   }
-}
-/***FIN DE LA PLANTILLA***//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
