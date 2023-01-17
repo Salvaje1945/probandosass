@@ -1,6 +1,10 @@
 @use '_vars' as *;
 
-
+// @media only screen and (min-width: map-get($wth_res,"tbl_01")) and (max-width: map-get($brk_pts,"bp_04")) {
+//     .contenido__desc--box:nth-child(3) {
+//         margin-right: 49%;
+//     }
+// }
 
 @media only screen and (min-width: map-get($brk_pts,"bp_01")) {
     .flex-4 {
