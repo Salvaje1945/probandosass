@@ -4,7 +4,7 @@
 
 // Tamaño fuente raíz
 
-$root_font_s: 16px !important;
+$font-size-root: 16px !important;
 
 // 01 - ***VALORES GENERALES***
 
@@ -91,6 +91,7 @@ $rel_lng: (
     "1": 1rem,
     "1.031": 1.031rem,
     "1.125": 1.125rem,
+    "1.25": 1.25rem,
     "1.45": 1.45rem,
     "1.5": 1.5rem,
     "1.563": 1.563rem,
@@ -107,12 +108,17 @@ $rel_lng: (
 $wth_res: (
     "mob_01": 325px,
     "mob_02": 375px,
-    "mob_03-h": 412px,
-    "mob_03-w": 702px,
-    "tbl_01": 702px,
     "pst_tbl": 922px,
     "dkp_01": 1280px,
     "dkp_02": 1330px,
+);
+
+$hgt_res: (
+    "bkp_01": 359px,
+    "bkp_02": 360px,
+    "bkp_03": 450px,
+    "bkp_04": 599px,
+    "bkp_05": 655px,
 );
 
 
@@ -223,4 +229,5 @@ $ital: italic;
 
 $solid: solid;
 $cursor: pointer;
+$vh_4: 4vh;
 $vh_100: 100vh;

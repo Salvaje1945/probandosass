@@ -1,0 +1,75 @@
+@use '_vars' as *;
+
+.contenido__bienvenida--txt {
+    padding: map-get($abs_lng,"10px") * 2;
+    background-image: linear-gradient(map-get($angles,"10°") * 18, map-get($color,"blanco") map-get($per_cent,"50") - map-get($per_cent,"5"), map-get($color,"beige") map-get($per_cent,"100"));
+}
+
+.contenido__bienvenida--vid {
+    padding: map-get($abs_lng,"10px");
+}
+
+.contenido__desc {
+    margin-top: map-get($abs_lng,"10px") * 3;
+}
+
+.contenido__desc--box {
+    max-width: map-get($abs_lng,"3px") * 117;
+    padding-bottom: map-get($abs_lng,"10px") * 3;
+}
+
+.contenido__desc--box--img {
+    width: map-get($abs_lng,"3px") * 117;
+    height: map-get($abs_lng,"10px") * 29;
+    margin-bottom: map-get($abs_lng,"5px") * 3;
+}
+
+.contenido__desc--box--img a img {
+    width: map-get($abs_lng,"3px") * 117;
+    height: map-get($abs_lng,"10px") * 29;
+}
+
+.contenido__desc--box p {
+    padding: map-get($num_int,"0") map-get($abs_lng,"5px");
+}
+
+.contenido__desc--box--btn {
+    position: map-get($pos,"rel");
+    width: map-get($abs_lng,"50px") * 3;
+    padding: map-get($abs_lng,"7px") map-get($abs_lng,"5px");
+    margin: map-get($num_int,"0") map-get($glob_kw,"auto");
+}
+
+/* 2-G - Herramientas para forzar la funcionalidad de la plantilla en resoluciones de ancho de pantalla mayores a 1023px y 1052px. */
+
+.ciego {
+    /* Este elemento sirve para forzar la ubicación del último bloque dentro de las cajas flexibles de 3 bloques en línea hacia el márgen izquierdo en lugar de ubicarse en el centro de la segunda fila al momento en que el ancho de pantalla supera los 701px.  */
+    visibility: map-get($vis,"coll");
+    width: map-get($abs_lng,"3px") * 117;
+    height: map-get($abs_lng,"1px");
+    padding: map-get($num_int,"0") !important;
+    margin: map-get($num_int,"0");
+}
+
+// **************************
+// Estilos de las secciones
+
+.contenido__desc--container {
+    margin-bottom: map-get($abs_lng,"10px") * 3;
+}
+
+.contenido__desc--info {
+    margin-bottom: map-get($abs_lng,"5px") * 3;
+}
+
+.contenido__desc--info,
+.contenido__desc--recs,
+.contenido__desc--serv {
+    width: map-get($per_cent,"100");
+    height: map-get($glob_kw,"auto");
+}
+
+.contenido__desc--recs,
+.contenido__desc--serv {
+    padding: map-get($abs_lng,"10px");
+}

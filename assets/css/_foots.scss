@@ -1,0 +1,82 @@
+@use '_vars' as *;
+
+.footer__links {
+    padding-top: map-get($abs_lng,"10px") * 2;
+}
+
+.footer__links--box {
+    min-width: map-get($abs_lng,"3px") * 117;
+    padding-top: map-get($abs_lng,"10px") * 2;
+}
+
+.footer__links--box p {
+    max-width: map-get($abs_lng,"3px") * 117;
+}
+
+#footer__links--box--sm {
+    padding-left: map-get($abs_lng,"10px") * 6;
+}
+
+#footer__links--box--sm ul {
+    line-height: map-get($num_dec,"1.45");
+}
+
+.footer__links--box--redes {
+    margin-top: map-get($abs_lng,"25px");
+}
+
+.footer__links--box ul {
+    margin: map-get($num_int,"0");
+    padding: map-get($num_int,"0") map-get($num_int,"0") map-get($num_int,"0") map-get($abs_lng,"5px") * 3;
+}
+
+.footer__links--box ul ul {
+    padding-left: map-get($abs_lng,"10px") * 2;
+}
+
+.footer__links--box--form {
+    margin: map-get($abs_lng,"5px") map-get($num_int,"0") map-get($abs_lng,"10px") * 2 map-get($num_int,"0");
+    padding: map-get($num_int,"0");
+}
+
+.footer__links--box--form ul {
+    padding: map-get($num_int,"0");
+}
+
+.footer__links--box--form ul li {
+    flex: map-get($glob_kw,"auto");
+}
+
+.footer__links--box--ipt {
+    width: map-get($abs_lng,"100px") * 3;
+    border-right: map-get($num_int,"0");
+    height: map-get($abs_lng,"5px") * 7;
+    margin-right: map-get($num_int,"0");
+}
+
+.footer__links--box--btn {
+    width: map-get($abs_lng,"50px") + map-get($abs_lng,"1px");
+    height: map-get($abs_lng,"5px") * 7;
+    padding: map-get($abs_lng,"5px");
+    border-left: map-get($num_int,"0");
+    margin-left: map-get($num_int,"0");
+}
+
+#footer__links--box--cont ul {
+    padding: map-get($num_int,"0");
+    margin: map-get($abs_lng,"10px") map-get($num_int,"0") map-get($abs_lng,"25px") map-get($num_int,"0");
+}
+
+#footer__links--box--cont ul i {
+    margin-right: map-get($abs_lng,"10px");
+    width: map-get($abs_lng,"5px") * 3 + map-get($abs_lng,"1px");
+}
+
+#footer__links--box--cont ul li {
+    margin-bottom: map-get($abs_lng,"5px");
+}
+
+.footer__autor {
+    height: map-get($abs_lng,"10px") * 3;
+    padding: map-get($abs_lng,"5px");
+}

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 0 - RUTEO - RESETEO - GLOBALES */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
+html,
 :root {
   font-size: 16px !important;
 }
@@ -443,232 +444,7 @@ Arreglo para la altura de línea del logo de la cabecera */
 }
 
 /* Fin de las herramientas para forzar el estilo y la funcionalidad del carousel de Bootstrap.
-*** Fin de estilos generales.***
-
-
-
-
-// 2 - Estructura básica general para TODA la plantilla (La plantilla del sitio fue desarrollada de forma tal que, si bien desde su concepción se priorizó su correcta visualización en dispositivos móviles, a la hora de adaptarla a resoluciones de pantalla de "escritorio", sólo se necesitasen pequeños ajustes en lugar de una diagramación nueva).
-// 2-A - Grilla */
-/* 2-E - Estilos para elementos particulares divididos por sección de la plantilla */
-.header__contactrow div ul li a {
-  padding-right: 10px;
-}
-
-.header__contactrow div ul li span {
-  padding: 0 5px 0 0;
-}
-
-.header__contactrow div ul li span a {
-  padding: 0;
-  margin: 0;
-}
-
-.header__principal {
-  padding: 5px 0 15px 0;
-  background: linear-gradient(180deg, #fff 0%, #ededed 100%);
-}
-
-.header__principal--logo {
-  padding-top: 7px;
-}
-
-.header__principal--menu {
-  padding-top: 10px;
-}
-
-.header__principal--menu ul {
-  position: fixed;
-  top: 95px;
-  left: -100%;
-  z-index: 999;
-}
-
-.header__principal--menu ul li {
-  padding-top: 42px;
-}
-
-#iconos-resp {
-  padding-top: 50px;
-}
-
-#enlace__menu__contactos__no {
-  display: block;
-}
-
-.header__principal--menu ul li span {
-  margin: 0 20px 25px;
-}
-
-.cerrar {
-  width: 28px;
-  height: 30px;
-}
-
-#check:checked ~ ul {
-  left: 0;
-  padding-left: 0;
-}
-
-.contenido__bienvenida--txt {
-  padding: 20px;
-  background-image: linear-gradient(180deg, #fff 45%, #E8CEAA 100%);
-}
-
-.contenido__bienvenida--vid {
-  padding: 10px;
-}
-
-.contenido__desc {
-  margin-top: 30px;
-}
-
-.contenido__desc--box {
-  max-width: 351px;
-  padding-bottom: 30px;
-}
-
-.contenido__desc--box--img {
-  width: 351px;
-  height: 290px;
-  margin-bottom: 15px;
-}
-
-.contenido__desc--box--img a img {
-  width: 351px;
-  height: 290px;
-}
-
-.contenido__desc--box p {
-  padding: 0 5px;
-}
-
-.contenido__desc--box--btn {
-  position: relative;
-  width: 150px;
-  padding: 7px 5px;
-  margin: 0 auto;
-}
-
-.footer__links {
-  padding-top: 20px;
-}
-
-.footer__links--box {
-  min-width: 351px;
-  padding-top: 20px;
-}
-
-.footer__links--box p {
-  max-width: 351px;
-}
-
-#footer__links--box--sm {
-  padding-left: 60px;
-}
-
-#footer__links--box--sm ul {
-  line-height: 1.45;
-}
-
-.footer__links--box--redes {
-  margin-top: 25px;
-}
-
-.footer__links--box ul {
-  margin: 0;
-  padding: 0 0 0 15px;
-}
-
-.footer__links--box ul ul {
-  padding-left: 20px;
-}
-
-.footer__links--box--form {
-  margin: 5px 0 20px 0;
-  padding: 0;
-}
-
-.footer__links--box--form ul {
-  padding: 0;
-}
-
-.footer__links--box--form ul li {
-  flex: auto;
-}
-
-.footer__links--box--ipt {
-  width: 300px;
-  border-right: 0;
-  height: 35px;
-  margin-right: 0;
-}
-
-.footer__links--box--btn {
-  width: 51px;
-  height: 35px;
-  padding: 5px;
-  border-left: 0;
-  margin-left: 0;
-}
-
-#footer__links--box--cont ul {
-  padding: 0;
-  margin: 10px 0 25px 0;
-}
-
-#footer__links--box--cont ul i {
-  margin-right: 10px;
-  width: 16px;
-}
-
-#footer__links--box--cont ul li {
-  margin-bottom: 5px;
-}
-
-.footer__autor {
-  height: 30px;
-  padding: 5px;
-}
-
-/* 2-F - Estilos para las distintas páginas del sitio.
-2-F:1 - Estilos comunes */
-.header__portada,
-.header__portada--img {
-  width: 100%;
-}
-
-.contenido__desc--container {
-  margin-bottom: 30px;
-}
-
-.contenido__desc--info {
-  margin-bottom: 15px;
-}
-
-.contenido__desc--info,
-.contenido__desc--recs,
-.contenido__desc--serv {
-  width: 100%;
-  height: auto;
-}
-
-.contenido__desc--recs,
-.contenido__desc--serv {
-  padding: 10px;
-}
-
-/* 2-G - Herramientas para forzar la funcionalidad de la plantilla en resoluciones de ancho de pantalla mayores a 1023px y 1052px. */
-.ciego {
-  /* Este elemento sirve para forzar la ubicación del último bloque dentro de las cajas flexibles de 3 bloques en línea hacia el márgen izquierdo en lugar de ubicarse en el centro de la segunda fila al momento en que el ancho de pantalla supera los 701px.  */
-  visibility: collapse;
-  width: 351px;
-  height: 1px;
-  padding: 0 !important;
-  margin: 0;
-}
-
-/***FIN DE LA PLANTILLA***/
+*** Fin de estilos generales.***/
 #contenedor {
   display: grid;
   grid-template-columns: 100%;
@@ -819,7 +595,234 @@ Arreglo para la altura de línea del logo de la cabecera */
   justify-content: space-between;
 }
 
-@media only screen and (max-height: 599px) {
+.header__contactrow div ul li a {
+  padding-right: 10px;
+}
+
+.header__contactrow div ul li span {
+  padding: 0 5px 0 0;
+}
+
+.header__contactrow div ul li span a {
+  padding: 0;
+  margin: 0;
+}
+
+.header__principal {
+  padding: 5px 0 15px 0;
+  background: linear-gradient(180deg, #fff 0%, #ededed 100%);
+}
+
+.header__principal--logo {
+  padding-top: 7px;
+}
+
+.header__principal--menu {
+  padding-top: 10px;
+}
+
+.header__principal--menu ul {
+  position: fixed;
+  top: 95px;
+  left: -100%;
+  z-index: 999;
+}
+
+.header__principal--menu ul li {
+  padding-top: 42px;
+}
+
+#iconos-resp {
+  padding-top: 50px;
+}
+
+#enlace__menu__contactos__no {
+  display: block;
+}
+
+.header__principal--menu ul li span {
+  margin: 0 20px 25px;
+}
+
+.cerrar {
+  width: 28px;
+  height: 30px;
+}
+
+#check:checked ~ ul {
+  left: 0;
+  padding-left: 0;
+}
+
+.header__portada,
+.header__portada--img {
+  width: 100%;
+}
+
+.contenido__bienvenida--txt {
+  padding: 20px;
+  background-image: linear-gradient(180deg, #fff 45%, #E8CEAA 100%);
+}
+
+.contenido__bienvenida--vid {
+  padding: 10px;
+}
+
+.contenido__desc {
+  margin-top: 30px;
+}
+
+.contenido__desc--box {
+  max-width: 351px;
+  padding-bottom: 30px;
+}
+
+.contenido__desc--box--img {
+  width: 351px;
+  height: 290px;
+  margin-bottom: 15px;
+}
+
+.contenido__desc--box--img a img {
+  width: 351px;
+  height: 290px;
+}
+
+.contenido__desc--box p {
+  padding: 0 5px;
+}
+
+.contenido__desc--box--btn {
+  position: relative;
+  width: 150px;
+  padding: 7px 5px;
+  margin: 0 auto;
+}
+
+/* 2-G - Herramientas para forzar la funcionalidad de la plantilla en resoluciones de ancho de pantalla mayores a 1023px y 1052px. */
+.ciego {
+  /* Este elemento sirve para forzar la ubicación del último bloque dentro de las cajas flexibles de 3 bloques en línea hacia el márgen izquierdo en lugar de ubicarse en el centro de la segunda fila al momento en que el ancho de pantalla supera los 701px.  */
+  visibility: collapse;
+  width: 351px;
+  height: 1px;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.contenido__desc--container {
+  margin-bottom: 30px;
+}
+
+.contenido__desc--info {
+  margin-bottom: 15px;
+}
+
+.contenido__desc--info,
+.contenido__desc--recs,
+.contenido__desc--serv {
+  width: 100%;
+  height: auto;
+}
+
+.contenido__desc--recs,
+.contenido__desc--serv {
+  padding: 10px;
+}
+
+.footer__links {
+  padding-top: 20px;
+}
+
+.footer__links--box {
+  min-width: 351px;
+  padding-top: 20px;
+}
+
+.footer__links--box p {
+  max-width: 351px;
+}
+
+#footer__links--box--sm {
+  padding-left: 60px;
+}
+
+#footer__links--box--sm ul {
+  line-height: 1.45;
+}
+
+.footer__links--box--redes {
+  margin-top: 25px;
+}
+
+.footer__links--box ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+.footer__links--box ul ul {
+  padding-left: 20px;
+}
+
+.footer__links--box--form {
+  margin: 5px 0 20px 0;
+  padding: 0;
+}
+
+.footer__links--box--form ul {
+  padding: 0;
+}
+
+.footer__links--box--form ul li {
+  flex: auto;
+}
+
+.footer__links--box--ipt {
+  width: 300px;
+  border-right: 0;
+  height: 35px;
+  margin-right: 0;
+}
+
+.footer__links--box--btn {
+  width: 51px;
+  height: 35px;
+  padding: 5px;
+  border-left: 0;
+  margin-left: 0;
+}
+
+#footer__links--box--cont ul {
+  padding: 0;
+  margin: 10px 0 25px 0;
+}
+
+#footer__links--box--cont ul i {
+  margin-right: 10px;
+  width: 16px;
+}
+
+#footer__links--box--cont ul li {
+  margin-bottom: 5px;
+}
+
+.footer__autor {
+  height: 30px;
+  padding: 5px;
+}
+
+@media only screen and (max-height: 359px) {
+  .header__principal--menu ul li {
+    font-size: 1rem;
+  }
+  .header__principal--menu ul li i {
+    font-size: 1.5rem;
+  }
+  .header__principal--menu ul li,
+#iconos-resp {
+    padding-top: 4vh;
+  }
+}
+@media only screen and (min-height: 360px) and (max-height: 599px) {
   .header__principal--menu ul li {
     font-size: 1.25rem;
   }
@@ -827,10 +830,10 @@ Arreglo para la altura de línea del logo de la cabecera */
     font-size: 2.5rem;
   }
   .header__principal--menu ul li {
-    padding-top: 27px;
+    padding-top: 20px;
   }
   #iconos-resp {
-    padding-top: 35px;
+    padding-top: 25px;
   }
   .header__principal--menu ul {
     height: 600px;
@@ -839,6 +842,11 @@ Arreglo para la altura de línea del logo de la cabecera */
 @media only screen and (max-height: 450px) {
   .header__principal--menu ul li span {
     margin: 0 10px 25px;
+  }
+}
+@media only screen and (max-height: 655px) {
+  .header__principal--menu ul {
+    height: 1000px;
   }
 }
 @media only screen and (min-width: 960px) {

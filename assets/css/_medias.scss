@@ -4,35 +4,55 @@
 //     .contenido__desc--box:nth-child(3) {
 //         margin-right: 49%;
 //     }
-// } (min-width: map-get($wth_res,"mob_03-w")) and 
+// map-get($hgt_res,"bkp_01") 
 
-@media only screen and (max-height: 599px) {
+@media only screen and (max-height: map-get($hgt_res,"bkp_01")) {
     .header__principal--menu ul li {
-        font-size: 1.25rem;
+        font-size: map-get($rel_lng,"1");
     }
 
     .header__principal--menu ul li i {
-        font-size: 2.5rem;
+        font-size: map-get($rel_lng,"1.5");
       }
 
-    .header__principal--menu ul li {
-        padding-top: 27px;
-    }
-
+    .header__principal--menu ul li,
     #iconos-resp {
-        padding-top: 35px;
-    }
-
-    .header__principal--menu ul {
-        height: 600px;
+        padding-top: $vh_4;
     }
 }
 
-@media only screen and (max-height: 450px) {
-    .header__principal--menu ul li span {
-        margin: 0 10px 25px;
+@media only screen and (min-height: map-get($hgt_res,"bkp_02")) and (max-height: map-get($hgt_res,"bkp_04")) {
+    .header__principal--menu ul li {
+        font-size: map-get($rel_lng,"1.25");
     }
 
+    .header__principal--menu ul li i {
+        font-size: map-get($rel_lng,"2.5");
+      }
+
+    .header__principal--menu ul li {
+        padding-top: map-get($abs_lng,"10px") * 2;
+    }
+
+    #iconos-resp {
+        padding-top: map-get($abs_lng,"25px");
+    }
+
+    .header__principal--menu ul {
+        height: map-get($abs_lng,"100px") * 6;
+    }
+}
+
+@media only screen and (max-height: map-get($hgt_res,"bkp_03")) {
+    .header__principal--menu ul li span {
+        margin: map-get($num_int,"0") map-get($abs_lng,"10px") map-get($abs_lng,"25px");
+    }
+}
+
+@media only screen and (max-height: map-get($hgt_res,"bkp_05")) {
+    .header__principal--menu ul {
+        height: map-get($abs_lng,"100px") * 10;
+    }
 }
 
 @media only screen and (min-width: map-get($brk_pts,"bp_01")) {

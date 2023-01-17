@@ -1,0 +1,68 @@
+@use '_vars' as *;
+
+.header__contactrow div ul li a {
+    padding-right: map-get($abs_lng,"10px");
+}
+
+.header__contactrow div ul li span {
+    padding: map-get($num_int,"0") map-get($abs_lng,"5px") map-get($num_int,"0") map-get($num_int,"0");
+}
+
+.header__contactrow div ul li span a {
+    padding: map-get($num_int,"0");
+    margin: map-get($num_int,"0");
+}
+
+.header__principal {
+    padding: map-get($abs_lng,"5px") map-get($num_int,"0") map-get($abs_lng,"5px") * 3 map-get($num_int,"0");
+    background: linear-gradient(map-get($angles,"10°") * 18, map-get($color,"blanco") map-get($per_cent,"0"), map-get($color,"gris_06") map-get($per_cent,"100"));
+}
+
+.header__principal--logo {
+    padding-top: map-get($abs_lng,"7px");
+}
+
+.header__principal--menu {
+    padding-top: map-get($abs_lng,"10px");
+}
+
+.header__principal--menu ul {
+    position: map-get($pos,"fix");
+    top: map-get($abs_lng,"100px") - map-get($abs_lng,"5px");
+    left: - map-get($per_cent,"100");
+    z-index: map-get($num_int,"100") * 10 - map-get($num_int,"1");
+}
+
+.header__principal--menu ul li {
+    padding-top: map-get($abs_lng,"3px") * 14;
+}
+
+#iconos-resp {
+    padding-top: map-get($abs_lng,"50px");
+}
+
+#enlace__menu__contactos__no {
+    display: map-get($disp,"blk");
+}
+
+.header__principal--menu ul li span {
+    margin: map-get($num_int,"0") map-get($abs_lng,"10px") * 2 map-get($abs_lng,"25px");
+}
+
+.cerrar {
+    width: map-get($abs_lng,"25px") + map-get($abs_lng,"3px");
+    height: map-get($abs_lng,"10px") * 3;
+}
+
+#check:checked~ul {
+    left: map-get($num_int,"0");
+    padding-left: map-get($num_int,"0");
+}
+
+//********************
+// Estilos de las secciones
+
+.header__portada,
+.header__portada--img {
+    width: map-get($per_cent,"100");
+}
