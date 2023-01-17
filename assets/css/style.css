@@ -819,6 +819,28 @@ Arreglo para la altura de línea del logo de la cabecera */
   justify-content: space-between;
 }
 
+@media only screen and (max-height: 599px) {
+  .header__principal--menu ul li {
+    font-size: 1.25rem;
+  }
+  .header__principal--menu ul li i {
+    font-size: 2.5rem;
+  }
+  .header__principal--menu ul li {
+    padding-top: 27px;
+  }
+  #iconos-resp {
+    padding-top: 35px;
+  }
+  .header__principal--menu ul {
+    height: 600px;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .header__principal--menu ul li span {
+    margin: 0 10px 25px;
+  }
+}
 @media only screen and (min-width: 960px) {
   .flex-4 {
     flex-flow: row nowrap;
