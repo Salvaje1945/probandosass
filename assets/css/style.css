@@ -444,158 +444,12 @@ Arreglo para la altura de línea del logo de la cabecera */
 
 /* Fin de las herramientas para forzar el estilo y la funcionalidad del carousel de Bootstrap.
 *** Fin de estilos generales.***
-2 - Estructura básica general para TODA la plantilla (La plantilla del sitio fue desarrollada de forma tal que, si bien desde su concepción se priorizó su correcta visualización en dispositivos móviles, a la hora de adaptarla a resoluciones de pantalla de "escritorio", sólo se necesitasen pequeños ajustes en lugar de una diagramación nueva).
-2-A - Grilla */
-#contenedor {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "cabeza" "main" "footer";
-}
 
-#header {
-  grid-area: cabeza;
-}
 
-#contenido {
-  grid-area: main;
-}
 
-#footer {
-  grid-area: footer;
-}
 
-/* 2-B - Ancho y alto de las grillas, cajas flexibles y otros elementos */
-#header,
-.header__contactrow,
-.header__principal,
-.header__principal--menu ul,
-.header__carrousel,
-#contenido,
-.contenido__bienvenida,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc,
-#footer,
-.footer__links,
-.footer__links--box--redes,
-.footer__autor {
-  width: 100%;
-}
-
-#header,
-#contenido,
-#footer {
-  min-width: 375px;
-}
-
-.header__principal--container,
-.contenido__desc--container {
-  min-width: 325px;
-  width: 80%;
-}
-
-#header,
-.header__carrousel,
-.contenido__desc,
-.contenido__desc--box,
-.contenido__desc--box p,
-.footer__links,
-.footer__links--box p {
-  height: auto;
-}
-
-.header__principal--menu ul {
-  height: 100vh;
-}
-
-/* 2-C - Despliegue de las cajas (y otros elementos) */
-.header__principal,
-.header__principal--container,
-#iconos-resp,
-.contenido__bienvenida,
-.contenido__desc,
-.contenido__desc--container,
-.footer__links,
-.footer__links--box--redes,
-.footer__links--box--form ul {
-  display: flex;
-}
-
-.header__principal--menu ul li,
-.hamburguesa,
-#check:checked ~ .cerrar,
-.contenido__desc--box--btn,
-.footer__autor {
-  display: block;
-}
-
-.header__contactrow div,
-.header__contactrow div ul li,
-.header__principal--logo,
-.header__principal--menu,
-.header__principal--menu ul li span,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc--box,
-.contenido__desc--info,
-.contenido__desc--recs,
-.footer__links--box,
-.footer__links--box--redes a,
-.footer__links--box--form {
-  display: inline-block;
-}
-
-.footer__links--box--ipt,
-.footer__links--box--btn {
-  display: inline;
-}
-
-.header__contactrow,
-.cerrar,
-#check,
-#check:checked ~ .hamburguesa,
-#enlace__menu__contactos {
-  display: none;
-}
-
-/* 2-D - Cajas flexibles predeterminadas */
-.flex-1,
-.flex-2,
-.flex-3,
-.flex-4,
-.flex-5,
-.flex-6 {
-  flex-flow: row wrap;
-}
-
-.flex-1,
-.flex-2 {
-  justify-content: space-around;
-}
-
-.flex-1,
-.flex-5 {
-  align-items: center;
-}
-
-.flex-6 {
-  align-items: flex-start;
-}
-
-.flex-3 {
-  justify-content: space-evenly;
-}
-
-.flex-4 {
-  justify-content: flex-start;
-}
-
-.flex-5,
-.flex-6 {
-  justify-content: space-between;
-}
-
+// 2 - Estructura básica general para TODA la plantilla (La plantilla del sitio fue desarrollada de forma tal que, si bien desde su concepción se priorizó su correcta visualización en dispositivos móviles, a la hora de adaptarla a resoluciones de pantalla de "escritorio", sólo se necesitasen pequeños ajustes en lugar de una diagramación nueva).
+// 2-A - Grilla */
 /* 2-E - Estilos para elementos particulares divididos por sección de la plantilla */
 .header__contactrow div ul li a {
   padding-right: 10px;
@@ -815,6 +669,156 @@ Arreglo para la altura de línea del logo de la cabecera */
 }
 
 /***FIN DE LA PLANTILLA***/
+#contenedor {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "cabeza" "main" "footer";
+}
+
+#header {
+  grid-area: cabeza;
+}
+
+#contenido {
+  grid-area: main;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+/* 2-B - Ancho y alto de las grillas, cajas flexibles y otros elementos */
+#header,
+.header__contactrow,
+.header__principal,
+.header__principal--menu ul,
+.header__carrousel,
+#contenido,
+.contenido__bienvenida,
+.contenido__bienvenida--txt,
+.contenido__bienvenida--vid,
+.contenido__desc,
+#footer,
+.footer__links,
+.footer__links--box--redes,
+.footer__autor {
+  width: 100%;
+}
+
+#header,
+#contenido,
+#footer {
+  min-width: 375px;
+}
+
+.header__principal--container,
+.contenido__desc--container {
+  min-width: 325px;
+  width: 80%;
+}
+
+#header,
+.header__carrousel,
+.contenido__desc,
+.contenido__desc--box,
+.contenido__desc--box p,
+.footer__links,
+.footer__links--box p {
+  height: auto;
+}
+
+.header__principal--menu ul {
+  height: 100vh;
+}
+
+/* 2-C - Despliegue de las cajas (y otros elementos) */
+.header__principal,
+.header__principal--container,
+#iconos-resp,
+.contenido__bienvenida,
+.contenido__desc,
+.contenido__desc--container,
+.footer__links,
+.footer__links--box--redes,
+.footer__links--box--form ul {
+  display: flex;
+}
+
+.header__principal--menu ul li,
+.hamburguesa,
+#check:checked ~ .cerrar,
+.contenido__desc--box--btn,
+.footer__autor {
+  display: block;
+}
+
+.header__contactrow div,
+.header__contactrow div ul li,
+.header__principal--logo,
+.header__principal--menu,
+.header__principal--menu ul li span,
+.contenido__bienvenida--txt,
+.contenido__bienvenida--vid,
+.contenido__desc--box,
+.contenido__desc--info,
+.contenido__desc--recs,
+.footer__links--box,
+.footer__links--box--redes a,
+.footer__links--box--form {
+  display: inline-block;
+}
+
+.footer__links--box--ipt,
+.footer__links--box--btn {
+  display: inline;
+}
+
+.header__contactrow,
+.cerrar,
+#check,
+#check:checked ~ .hamburguesa,
+#enlace__menu__contactos {
+  display: none;
+}
+
+/* 2-D - Cajas flexibles predeterminadas */
+.flex-1,
+.flex-2,
+.flex-3,
+.flex-4,
+.flex-5,
+.flex-6 {
+  flex-flow: row wrap;
+}
+
+.flex-1,
+.flex-2 {
+  justify-content: space-around;
+}
+
+.flex-1,
+.flex-5 {
+  align-items: center;
+}
+
+.flex-6 {
+  align-items: flex-start;
+}
+
+.flex-3 {
+  justify-content: space-evenly;
+}
+
+.flex-4 {
+  justify-content: flex-start;
+}
+
+.flex-5,
+.flex-6 {
+  justify-content: space-between;
+}
+
 @media only screen and (min-width: 960px) {
   .flex-4 {
     flex-flow: row nowrap;

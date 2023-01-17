@@ -449,167 +449,183 @@ Arreglo para la altura de línea del logo de la cabecera */
 
 /* Fin de las herramientas para forzar el estilo y la funcionalidad del carousel de Bootstrap.
 *** Fin de estilos generales.***
-2 - Estructura básica general para TODA la plantilla (La plantilla del sitio fue desarrollada de forma tal que, si bien desde su concepción se priorizó su correcta visualización en dispositivos móviles, a la hora de adaptarla a resoluciones de pantalla de "escritorio", sólo se necesitasen pequeños ajustes en lugar de una diagramación nueva).
-2-A - Grilla */
 
-#contenedor {
-    display: map-get($disp,"grd");
-    grid-template-columns: map-get($per_cent,"100");
-    grid-template-rows: repeat(3, map-get($glob_kw,"auto"));
-    grid-template-areas:
 
-        "cabeza"
-        "main"
-        "footer"
 
-    ;
-}
 
-#header {
-    grid-area: cabeza;
-}
+// 2 - Estructura básica general para TODA la plantilla (La plantilla del sitio fue desarrollada de forma tal que, si bien desde su concepción se priorizó su correcta visualización en dispositivos móviles, a la hora de adaptarla a resoluciones de pantalla de "escritorio", sólo se necesitasen pequeños ajustes en lugar de una diagramación nueva).
+// 2-A - Grilla */
 
-#contenido {
-    grid-area: main;
-}
+// #contenedor {
+//     display: map-get($disp,"grd");
+//     grid-template-columns: map-get($per_cent,"100");
+//     grid-template-rows: repeat(3, map-get($glob_kw,"auto"));
+//     grid-template-areas:
 
-#footer {
-    grid-area: footer;
-}
+//         "cabeza"
+//         "main"
+//         "footer"
 
-/* 2-B - Ancho y alto de las grillas, cajas flexibles y otros elementos */
+//     ;
+// }
 
-#header,
-.header__contactrow,
-.header__principal,
-.header__principal--menu ul,
-.header__carrousel,
-#contenido,
-.contenido__bienvenida,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc,
-#footer,
-.footer__links,
-.footer__links--box--redes,
-.footer__autor {
-    width: map-get($per_cent,"100");
-}
+// #header {
+//     grid-area: cabeza;
+// }
 
-#header,
-#contenido,
-#footer {
-    min-width: map-get($wth_res,"mob_02");
-}
+// #contenido {
+//     grid-area: main;
+// }
 
-.header__principal--container,
-.contenido__desc--container {
-    min-width: map-get($wth_res,"mob_01");
-    width: map-get($per_cent,"10") * 8;
-}
+// #footer {
+//     grid-area: footer;
+// }
 
-#header,
-.header__carrousel,
-.contenido__desc,
-.contenido__desc--box,
-.contenido__desc--box p,
-.footer__links,
-.footer__links--box p {
-    height: map-get($glob_kw,"auto");
-}
+// /* 2-B - Ancho y alto de las grillas, cajas flexibles y otros elementos */
 
-.header__principal--menu ul {
-    height: $vh_100;
-}
+// #header,
+// .header__contactrow,
+// .header__principal,
+// .header__principal--menu ul,
+// .header__carrousel,
+// #contenido,
+// .contenido__bienvenida,
+// .contenido__bienvenida--txt,
+// .contenido__bienvenida--vid,
+// .contenido__desc,
+// #footer,
+// .footer__links,
+// .footer__links--box--redes,
+// .footer__autor {
+//     width: map-get($per_cent,"100");
+// }
 
-/* 2-C - Despliegue de las cajas (y otros elementos) */
+// #header,
+// #contenido,
+// #footer {
+//     min-width: map-get($wth_res,"mob_02");
+// }
 
-.header__principal,
-.header__principal--container,
-#iconos-resp,
-.contenido__bienvenida,
-.contenido__desc,
-.contenido__desc--container,
-.footer__links,
-.footer__links--box--redes,
-.footer__links--box--form ul {
-    display: map-get($disp,"flex");
-}
+// .header__principal--container,
+// .contenido__desc--container {
+//     min-width: map-get($wth_res,"mob_01");
+//     width: map-get($per_cent,"10") * 8;
+// }
 
-.header__principal--menu ul li,
-.hamburguesa,
-#check:checked~.cerrar,
-.contenido__desc--box--btn,
-.footer__autor {
-    display: map-get($disp,"blk");
-}
+// #header,
+// .header__carrousel,
+// .contenido__desc,
+// .contenido__desc--box,
+// .contenido__desc--box p,
+// .footer__links,
+// .footer__links--box p {
+//     height: map-get($glob_kw,"auto");
+// }
 
-.header__contactrow div,
-.header__contactrow div ul li,
-.header__principal--logo,
-.header__principal--menu,
-.header__principal--menu ul li span,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc--box,
-.contenido__desc--info,
-.contenido__desc--recs,
-.footer__links--box,
-.footer__links--box--redes a,
-.footer__links--box--form {
-    display: map-get($disp,"blk_lin");
-}
+// .header__principal--menu ul {
+//     height: $vh_100;
+// }
 
-.footer__links--box--ipt,
-.footer__links--box--btn {
-    display: map-get($disp,"lin");
-}
+// /* 2-C - Despliegue de las cajas (y otros elementos) */
 
-.header__contactrow,
-.cerrar,
-#check,
-#check:checked~.hamburguesa,
-#enlace__menu__contactos {
-    display: map-get($glob_kw,"none");
-}
+// .header__principal,
+// .header__principal--container,
+// #iconos-resp,
+// .contenido__bienvenida,
+// .contenido__desc,
+// .contenido__desc--container,
+// .footer__links,
+// .footer__links--box--redes,
+// .footer__links--box--form ul {
+//     display: map-get($disp,"flex");
+// }
 
-/* 2-D - Cajas flexibles predeterminadas */
+// .header__principal--menu ul li,
+// .hamburguesa,
+// #check:checked~.cerrar,
+// .contenido__desc--box--btn,
+// .footer__autor {
+//     display: map-get($disp,"blk");
+// }
 
-.flex-1,
-.flex-2,
-.flex-3,
-.flex-4,
-.flex-5,
-.flex-6 {
-    flex-flow: map-get($flow,"flow_01");
-}
+// .header__contactrow div,
+// .header__contactrow div ul li,
+// .header__principal--logo,
+// .header__principal--menu,
+// .header__principal--menu ul li span,
+// .contenido__bienvenida--txt,
+// .contenido__bienvenida--vid,
+// .contenido__desc--box,
+// .contenido__desc--info,
+// .contenido__desc--recs,
+// .footer__links--box,
+// .footer__links--box--redes a,
+// .footer__links--box--form {
+//     display: map-get($disp,"blk_lin");
+// }
 
-.flex-1,
-.flex-2 {
-    justify-content: map-get($pos,"spe_aro");
-}
+// .footer__links--box--ipt,
+// .footer__links--box--btn {
+//     display: map-get($disp,"lin");
+// }
 
-.flex-1,
-.flex-5 {
-    align-items: map-get($pos,"ctr");
-}
+// .header__contactrow,
+// .cerrar,
+// #check,
+// #check:checked~.hamburguesa,
+// #enlace__menu__contactos {
+//     display: map-get($glob_kw,"none");
+// }
 
-.flex-6 {
-    align-items: map-get($pos,"f_str");
-}
+// /* 2-D - Cajas flexibles predeterminadas */
 
-.flex-3 {
-    justify-content: map-get($pos,"spe_eve");
-}
+// .flex-1,
+// .flex-2,
+// .flex-3,
+// .flex-4,
+// .flex-5,
+// .flex-6 {
+//     flex-flow: map-get($flow,"flow_01");
+// }
 
-.flex-4 {
-    justify-content: map-get($pos,"f_str");
-}
+// .flex-1,
+// .flex-2 {
+//     justify-content: map-get($pos,"spe_aro");
+// }
 
-.flex-5,
-.flex-6 {
-    justify-content: map-get($pos,"spe_bet");
-}
+// .flex-1,
+// .flex-5 {
+//     align-items: map-get($pos,"ctr");
+// }
+
+// .flex-6 {
+//     align-items: map-get($pos,"f_str");
+// }
+
+// .flex-3 {
+//     justify-content: map-get($pos,"spe_eve");
+// }
+
+// .flex-4 {
+//     justify-content: map-get($pos,"f_str");
+// }
+
+// .flex-5,
+// .flex-6 {
+//     justify-content: map-get($pos,"spe_bet");
+// }
+
+
+
+// ********************************************************
+
+
+
+
+
+
+
+
 
 /* 2-E - Estilos para elementos particulares divididos por sección de la plantilla */
 
