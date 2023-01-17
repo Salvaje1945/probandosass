@@ -1,0 +1,93 @@
+@use '_vars' as *;
+
+// Fila 100%
+
+.row-full-wth {
+    width: map-get($per_cent,"100");
+    height: map-get($abs_lng,"10px") * 3;
+    text-align: map-get($pos,"ctr");
+    // display: map-get($disp,"blk");
+}
+
+@mixin row-full-wth_edit ($dsp: map-get($disp,"blk"), $bg_c: map-get($glob_kw,"inh"), $padd: map-get($num_int,"0")) {
+    @extend .row-full-wth;
+    display: $dsp;
+    background-color: $bg_c;
+    padding: $padd;
+}
+
+// Cajas flexbox
+
+.flex-1,
+.flex-2,
+.flex-3,
+.flex-4,
+.flex-5,
+.flex-6 {
+    display:flex;
+    flex-flow: map-get($flow,"flow_01");
+}
+
+.flex-1,
+.flex-2,
+.flex-3,
+.flex-4 {
+    width: map-get($per_cent,"100");
+}
+
+.flex-1,
+.flex-2 {
+    justify-content: map-get($pos,"spe_aro");
+}
+
+.flex-1,
+.flex-5 {
+    align-items: map-get($pos,"ctr");
+}
+
+.flex-6 {
+    align-items: map-get($pos,"f_str");
+}
+
+.flex-3 {
+    justify-content: map-get($pos,"spe_eve");
+}
+
+.flex-4 {
+    justify-content: map-get($pos,"f_str");
+}
+
+.flex-5,
+.flex-6 {
+    justify-content: map-get($pos,"spe_bet");
+}
+
+@media only screen and (min-width: map-get($brk_pts,"bp_01")) {
+    .flex-4 {
+        flex-flow: map-get($flow,"flow_02");
+        justify-content: map-get($pos,"ctr");
+    }
+}
+
+
+@media only screen and (min-width: map-get($brk_pts,"bp_03")) {
+    .flex-1 {
+        justify-content: space-evenly;
+    }
+
+    .flex-6 {
+        flex-flow: map-get($flow,"flow_02");
+    }
+}
+
+// Cajas hijas
+
+.col-3 {
+    width: map-get($abs_lng,"3px") * 117;
+    height: map-get($glob_kw,"auto");
+}
+
+@mixin col-3_edit ($padd_ed: map-get($num_int,"0")) {
+    @extend .col-3;
+    padding: $padd_ed;
+}

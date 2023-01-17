@@ -1,10 +1,5 @@
 @use '_vars' as *;
-
-// @media only screen and (min-width: map-get($wth_res,"tbl_01")) and (max-width: map-get($brk_pts,"bp_04")) {
-//     .contenido__desc--box:nth-child(3) {
-//         margin-right: 49%;
-//     }
-// map-get($hgt_res,"bkp_01") 
+@use '_predef' as *;
 
 @media only screen and (max-height: map-get($hgt_res,"bkp_01")) {
     .header__principal--menu ul li {
@@ -56,11 +51,6 @@
 }
 
 @media only screen and (min-width: map-get($brk_pts,"bp_01")) {
-    .flex-4 {
-        flex-flow: map-get($flow,"flow_02");
-        justify-content: map-get($pos,"ctr");
-    }
-
     .contenido__bienvenida--txt {
         width: map-get($per_cent,"50");
     }
@@ -79,27 +69,24 @@
 @media only screen and (min-width: map-get($brk_pts,"bp_03")) {
     .header__contactrow {
         display: map-get($disp,"blk");
-        height: map-get($abs_lng,"10px") * 3;
-        padding-top: map-get($abs_lng,"3px");
-        text-align: map-get($pos,"ctr");
-    }
-
-    .header__contactrow div {
+        // height: map-get($abs_lng,"10px") * 3;
+        // padding-top: map-get($abs_lng,"3px");
+        // text-align: map-get($pos,"ctr");
+        
+        div {
         min-width: map-get($wth_res,"pst_tbl");
         width: map-get($per_cent,"10") * 8;
         margin: map-get($abs_lng,"0px") map-get($glob_kw,"auto");
+        }
     }
 
     .header__contactrow div ul li {
         padding-left: map-get($abs_lng,"7px");
     }
 
-    .flex-1 {
-        justify-content: map-get($pos,"spe_eve");
-    }
-
     .header__principal {
         padding: map-get($abs_lng,"10px") map-get($num_int,"0");
+        
     }
 
     .header__principal--container {
@@ -107,7 +94,8 @@
     }
 
     .header__principal--logo {
-        padding-top: map-get($abs_lng,"3px");
+        padding-top: map-get($num_int,"0");
+        padding-bottom: map-get($abs_lng,"3px");
     }
 
     #check,
@@ -184,10 +172,6 @@
     
     .contenido__desc--recs {
         width: map-get($per_cent,"3") * 11;
-    }
-
-    .flex-6 {
-        flex-flow: map-get($flow,"flow_02");
     }
 }
 

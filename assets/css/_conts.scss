@@ -1,58 +1,114 @@
 @use '_vars' as *;
+@use '_predef' as *;
+
+.contenido__bienvenida {
+    @extend .flex-4;
+}
 
 .contenido__bienvenida--txt {
     padding: map-get($abs_lng,"10px") * 2;
-    background-image: linear-gradient(map-get($angles,"10°") * 18, map-get($color,"blanco") map-get($per_cent,"50") - map-get($per_cent,"5"), map-get($color,"beige") map-get($per_cent,"100"));
+    background: linear-gradient(map-get($angles,"10°") * 18, map-get($color,"blanco") map-get($per_cent,"50") - map-get($per_cent,"5"), map-get($color,"beige") map-get($per_cent,"100"));
+    width: map-get($per_cent,"100");
+
+    h2 {
+        font-weight: map-get($num_int,"100") * 6 + map-get($num_int,"50");
+        text-align: map-get($pos,"ctr");
+        margin-bottom: map-get($abs_lng,"5px") * 3;
+    }
+
+    p {
+        text-align: map-get($pos,"jtf");
+    }
 }
 
 .contenido__bienvenida--vid {
     padding: map-get($abs_lng,"10px");
+    background-color: map-get($color,"azul");
+    width: map-get($per_cent,"100");
 }
 
 .contenido__desc {
-    margin-top: map-get($abs_lng,"10px") * 3;
+    @extend .flex-3;
+        margin-top: map-get($abs_lng,"10px") * 3;
+
+    .ciego {
+        visibility: map-get($vis,"coll");
+        width: map-get($abs_lng,"3px") * 117;
+        height: map-get($abs_lng,"1px");
+        padding: map-get($num_int,"0") !important;
+        margin: map-get($num_int,"0");
+    }
 }
 
 .contenido__desc--box {
-    max-width: map-get($abs_lng,"3px") * 117;
-    padding-bottom: map-get($abs_lng,"10px") * 3;
+    @include col-3_edit($padd_ed: map-get($num_int,"0") map-get($num_int,"0") map-get($abs_lng,"10px") * 3);
+    text-align: map-get($pos,"ctr");
+
+    h3 {
+        margin-bottom: map-get($abs_lng,"10px");
+
+        a {
+            font-family: $fam_02;
+            color: map-get($color,"gris_02");
+            font-size: map-get($rel_lng,"1.5");
+
+            &:hover {
+                color: map-get($color,"rosa");
+            }
+        }
+    }
+
+    p {
+        padding: map-get($num_int,"0") map-get($abs_lng,"5px");
+        font-size: map-get($rel_lng,"0.8");
+        text-align: map-get($pos,"ctr");
+        margin-bottom: map-get($abs_lng,"10px") * 2;
+    }
+
+    .contenido__desc--box--img {
+        width: map-get($abs_lng,"3px") * 117;
+        height: map-get($abs_lng,"10px") * 29;
+        margin-bottom: map-get($abs_lng,"5px") * 3;
+        overflow: map-get($vis,"no_vis");
+
+        a {
+            img {
+                width: map-get($abs_lng,"3px") * 117;
+                height: map-get($abs_lng,"10px") * 29;
+                transition: map-get($times,"seg");
+                cursor: $cursor;
+
+                &:hover {
+                    transition: map-get($times,"seg");
+                    transform: scale(map-get($num_dec,"1.2"));
+                }
+            }
+        }
+    }
+
+    .contenido__desc--box--btn {
+        font-family: $fam_02;
+        position: map-get($pos,"rel");
+        width: map-get($abs_lng,"50px") * 3;
+        padding: map-get($abs_lng,"7px") map-get($abs_lng,"5px");
+        margin: map-get($num_int,"0") map-get($glob_kw,"auto");
+        color: map-get($color,"blanco");
+        font-size: map-get($rel_lng,"0.9");
+        font-weight: map-get($glob_kw,"norm");
+        text-align: map-get($pos,"ctr");
+        background-color: map-get($color,"azul");
+        border: map-get($abs_lng,"1px") $solid map-get($color,"gris_02");
+        transition: map-get($times,"m_seg");
+        cursor: $cursor;
+
+        &:hover {
+            color: map-get($color,"negro");
+            font-weight: map-get($num_int,"100") * 6;
+            background-color: map-get($color,"rosa");
+            transition: map-get($times,"m_seg");
+        }
+    }
 }
-
-.contenido__desc--box--img {
-    width: map-get($abs_lng,"3px") * 117;
-    height: map-get($abs_lng,"10px") * 29;
-    margin-bottom: map-get($abs_lng,"5px") * 3;
-}
-
-.contenido__desc--box--img a img {
-    width: map-get($abs_lng,"3px") * 117;
-    height: map-get($abs_lng,"10px") * 29;
-}
-
-.contenido__desc--box p {
-    padding: map-get($num_int,"0") map-get($abs_lng,"5px");
-}
-
-.contenido__desc--box--btn {
-    position: map-get($pos,"rel");
-    width: map-get($abs_lng,"50px") * 3;
-    padding: map-get($abs_lng,"7px") map-get($abs_lng,"5px");
-    margin: map-get($num_int,"0") map-get($glob_kw,"auto");
-}
-
-/* 2-G - Herramientas para forzar la funcionalidad de la plantilla en resoluciones de ancho de pantalla mayores a 1023px y 1052px. */
-
-.ciego {
-    /* Este elemento sirve para forzar la ubicación del último bloque dentro de las cajas flexibles de 3 bloques en línea hacia el márgen izquierdo en lugar de ubicarse en el centro de la segunda fila al momento en que el ancho de pantalla supera los 701px.  */
-    visibility: map-get($vis,"coll");
-    width: map-get($abs_lng,"3px") * 117;
-    height: map-get($abs_lng,"1px");
-    padding: map-get($num_int,"0") !important;
-    margin: map-get($num_int,"0");
-}
-
-// **************************
-// Estilos de las secciones
 
 .contenido__desc--container {
     margin-bottom: map-get($abs_lng,"10px") * 3;
@@ -60,6 +116,10 @@
 
 .contenido__desc--info {
     margin-bottom: map-get($abs_lng,"5px") * 3;
+
+    p {
+        text-align: map-get($pos,"jtf");
+    }
 }
 
 .contenido__desc--info,
@@ -69,7 +129,25 @@
     height: map-get($glob_kw,"auto");
 }
 
+.contenido__desc--serv {
+
+    p {
+        text-align: map-get($pos,"jtf");
+    }
+}
+
 .contenido__desc--recs,
 .contenido__desc--serv {
     padding: map-get($abs_lng,"10px");
+}
+
+.contenido__desc--recs {
+    background-color: map-get($color,"azul");
+
+    h3,
+    h4,
+    p {
+        color: map-get($color,"blanco");
+    }
+
 }

@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/* 0 - RUTEO - RESETEO - GLOBALES */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 html,
 :root {
   font-size: 16px !important;
+  scroll-behavior: auto;
 }
 
 * {
@@ -34,364 +34,335 @@ p {
   -webkit-margin-after: 0;
           margin-block-end: 0;
   font-size: 0.875rem;
-}
-
-/* 1 - Estilos generales:
-1-A - Fuentes (familias, colores, tamaños, grosores, decoraciones y otros estilos, alineaciones de texto) */
-h1,
-.header__principal--logo h1 a,
-.footer__links--box h1,
-.footer__links--box h2 {
-  font-family: "Oleo Script", cursive;
-}
-
-h2,
-h3,
-h4,
-h5,
-a,
-p,
-.header__contactrow div ul li,
-.header__contactrow div ul li a,
-.header__principal--menu ul li,
-.contenido__desc--box h3 a,
-.contenido__desc--box--btn,
-.footer__links--box ul,
-.footer__links--box ul a,
-.footer__links--box--ipt,
-.footer__links--box--btn,
-#footer__links--box--cont ul li,
-#footer__links--box--cont ul li a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-p,
-.header__principal--menu ul li a:hover,
-.contenido__desc--box--btn:hover,
-.footer__links--box--btn:hover {
   color: #000;
 }
 
-.header__contactrow div ul li a:hover,
-.header__contactrow div ul li span a i:hover,
-.header__principal--logo h1 a:hover,
-.header__principal--menu ul li {
-  color: #333;
+h1 {
+  font-family: "Oleo Script", cursive;
+  color: #2C82B8;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
+p,
+a,
 h2,
 h3,
-.contenido__desc--box h3 a {
-  color: #444;
-}
-
+h4,
 h5 {
-  color: #666;
-}
-
-.footer__links--box h1,
-.footer__links--box h2,
-.footer__links--box--redes a {
-  color: #aaa;
-}
-
-.footer__links--box p,
-.footer__links--box ul a,
-.footer__links--box--ipt,
-#footer__links--box--cont ul li,
-#footer__links--box--cont ul li a {
-  color: #ccc;
-}
-
-h4,
-.header__contactrow div ul li,
-.header__contactrow div ul li a,
-.header__contactrow div ul li i,
-.contenido__desc--box--btn,
-.contenido__desc--recs h3,
-.contenido__desc--recs h4,
-.contenido__desc--recs p,
-.footer__links--box--btn,
-#footer__links--box--cont ul i {
-  color: #fff;
-}
-
-.header__principal--logo h1,
-.header__principal--logo h1 a,
-.header__principal--menu ul li a,
-#enlace__menu__contactos__no,
-.hamburguesa,
-.cerrar,
-.footer__links--box--redes a:hover,
-.footer__links--box ul,
-#footer__links--box--cont ul a:hover {
-  color: #2C82B8;
-}
-
-.contenido__desc--box h3 a:hover,
-.footer__links--box ul a:hover {
-  color: #FF99FF;
-}
-
-.contenido__desc--box p {
-  font-size: 0.8rem;
-}
-
-h5,
-.contenido__desc--box--btn {
-  font-size: 0.9rem;
-}
-
-h4,
-.header__contactrow div ul li,
-.header__contactrow div ul li a,
-.header__contactrow div ul li i,
-.footer__links--box ul a,
-.footer__links--box--ipt,
-.footer__links--box--btn,
-#footer__links--box--cont ul i,
-#footer__links--box--cont ul li,
-#footer__links--box--cont ul li a {
-  font-size: 1rem;
-}
-
-#footer__links--box--sm ul li {
-  font-size: 1.031rem;
-}
-
-.header__principal--menu ul li {
-  font-size: 1.45rem;
-}
-
-h3,
-.contenido__desc--box h3 a {
-  font-size: 1.5rem;
-}
-
-.header__principal--logo h1 span,
-.header__principal--logo h1 a span,
-.footer__links--box h2 {
-  font-size: 1.563rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h2 {
   font-size: 1.875rem;
 }
 
-.header__principal--logo h1,
-.header__principal--logo h1 a {
-  font-size: 2.5rem;
+h3 {
+  font-size: 1.5rem;
 }
 
-.footer__links--box h1 {
-  font-size: 3rem;
+h2,
+h3 {
+  color: #444;
+  font-weight: 600;
 }
 
-.header__principal--menu ul li i {
-  font-size: 3.5rem;
+h4 {
+  color: #fff;
+  font-size: 1rem;
 }
 
-.footer__links--box--redes a {
-  font-size: 4rem;
+h5 {
+  color: #666;
+  font-size: 0.9rem;
 }
 
 p,
 h4,
-h5,
-.contenido__desc--box--btn,
-.footer__links--box--btn {
+h5 {
   font-weight: normal;
 }
 
-h2,
-h3,
+#contenedor {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "cabeza" "main" "footer";
+}
+#contenedor #header,
+#contenedor #contenido,
+#contenedor #footer {
+  min-width: 375px;
+  width: 100%;
+}
+#contenedor #header {
+  grid-area: cabeza;
+  height: auto;
+}
+#contenedor #contenido {
+  grid-area: main;
+}
+#contenedor #footer {
+  grid-area: footer;
+}
+
+.header__principal--container,
+.contenido__desc--container {
+  min-width: 325px;
+  width: 80%;
+}
+
+.contenido__desc--container,
+.footer__links--box--form ul {
+  display: flex;
+}
+
 .header__principal--menu ul li,
-.contenido__desc--box--btn:hover,
-.footer__links--box--btn:hover {
-  font-weight: 600;
-}
-
-.contenido__bienvenida--txt h2 {
-  font-weight: 650;
-}
-
-.header__contactrow div ul li,
-.header__contactrow div ul li a {
-  font-weight: 500;
-}
-
-.footer__links--box ul a:hover {
-  text-decoration: none;
-}
-
-.header__principal--menu ul li {
-  text-transform: uppercase;
-}
-
-.footer__links--box h1 {
-  line-height: 1;
-}
-
-.footer__links--box p {
-  line-height: 1.2;
-}
-
-.footer__links--box--ipt {
-  font-style: italic;
-}
-
-.header__principal--logo,
-.footer__links {
-  text-align: left;
-}
-
-.header__contactrow,
-.header__principal--menu ul li,
-.cerrar,
-.contenido__bienvenida--txt h2,
-.contenido__desc--box,
-.contenido__desc--box p,
-.contenido__desc--box--btn,
-.footer__links--box--ctr,
-.footer__links--box--btn,
-#footer__links--box--cont ul i,
-.footer__autor {
-  text-align: center;
-}
-
-.contenido__bienvenida--txt p,
-.contenido__desc--info p,
-.contenido__desc--serv p,
-.footer__links--box p {
-  text-align: justify;
+.hamburguesa,
+#check:checked ~ .cerrar,
+.contenido__desc--box--btn {
+  display: block;
 }
 
 .header__contactrow div,
-.header__contactrow div ul {
-  text-align: right;
-}
-
-.header__contactrow div ul {
-  padding-left: 0;
-}
-
-.header__contactrow div ul,
-.footer__links--box h1,
-.footer__links--box h2 {
-  margin-bottom: 0;
-}
-
-.contenido__desc--box h3 {
-  margin-bottom: 10px;
-}
-
-.contenido__bienvenida--txt h2 {
-  margin-bottom: 15px;
-}
-
-.contenido__desc--box p {
-  margin-bottom: 20px;
-}
-
-.footer__links--box p {
-  margin-top: 5px;
-}
-
-/* 1-B Listas */
-.footer__links--box ul {
-  list-style-image: url(../img/flecha-derecha-blanca.png);
-}
-
-.header__contactrow div ul,
-.header__principal--menu ul,
-.footer__links--box--form ul,
-#footer__links--box--cont ul {
-  list-style: none;
-}
-
-/* 1-C Colores de fondo */
-.header__principal--menu ul {
-  background-color: #ededed;
-}
-
-.footer__autor {
-  background-color: #000;
-}
-
-.footer__links--box--ipt {
-  background-color: #333;
-}
-
-.footer__links {
-  background-color: #444;
-}
-
-.header__contactrow,
+.header__contactrow div ul li,
+.header__principal--logo,
+.header__principal--menu,
+.header__principal--menu ul li span,
+.contenido__bienvenida--txt,
 .contenido__bienvenida--vid,
-.contenido__desc--box--btn,
+.contenido__desc--box,
+.contenido__desc--info,
 .contenido__desc--recs,
-.footer__links--box--btn {
-  background-color: #2C82B8;
-}
-
-.contenido__desc--box--btn:hover,
-.footer__links--box--btn:hover {
-  background-color: #FF99FF;
-}
-
-/* 1-D Bordes */
-.contenido__desc--box--btn {
-  border: 1px solid #444;
+.footer__links--box,
+.footer__links--box--redes a,
+.footer__links--box--form {
+  display: inline-block;
 }
 
 .footer__links--box--ipt,
 .footer__links--box--btn {
-  border: 1px solid #666;
+  display: inline;
 }
 
-/* 1-E Animaciones (Transiciones y transformaciones) */
-.header__principal--menu ul,
-.contenido__desc--box--btn,
-.contenido__desc--box--btn:hover,
-.footer__links--box--redes a,
-.footer__links--box--redes a:hover,
-.footer__links--box--btn,
-.footer__links--box--btn:hover {
-  transition: 0.5s;
-}
-
-.contenido__desc--box--img a img,
-.contenido__desc--box--img a img:hover {
-  transition: 1s;
-}
-
-.contenido__desc--box--img a img:hover {
-  transform: scale(1.2);
-}
-
-/* 1-F Misceláneos (Overflows, cursores, etc) */
-.contenido__desc--box--img {
-  overflow: hidden;
-}
-
-.hamburguesa,
 .cerrar,
-.contenido__desc--box--img a img,
-.contenido__desc--box--btn,
-.footer__links--box--redes a,
-.footer__links--box--btn {
-  cursor: pointer;
+#check,
+#check:checked ~ .hamburguesa,
+#enlace__menu__contactos {
+  display: none;
 }
 
-/* 1-G Herramientas de forzado de diseño:
-Arreglo para la altura de línea del logo de la cabecera */
+.row-full-wth, .footer__autor, .header__contactrow {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.flex-1, .header__principal,
+.flex-2,
+.footer__links--box--redes,
+.flex-3,
+.footer__links,
+.contenido__desc,
+.header__principal--menu ul li #iconos-resp,
+.flex-4,
+.contenido__bienvenida,
+.flex-5,
+.header__principal--container,
+.flex-6 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-1, .header__principal,
+.flex-2,
+.footer__links--box--redes,
+.flex-3,
+.footer__links,
+.contenido__desc,
+.header__principal--menu ul li #iconos-resp,
+.flex-4,
+.contenido__bienvenida {
+  width: 100%;
+}
+
+.flex-1, .header__principal,
+.flex-2,
+.footer__links--box--redes {
+  justify-content: space-around;
+}
+
+.flex-1, .header__principal,
+.flex-5,
+.header__principal--container {
+  align-items: center;
+}
+
+.flex-6 {
+  align-items: flex-start;
+}
+
+.flex-3, .footer__links, .contenido__desc, .header__principal--menu ul li #iconos-resp {
+  justify-content: space-evenly;
+}
+
+.flex-4, .contenido__bienvenida {
+  justify-content: flex-start;
+}
+
+.flex-5, .header__principal--container,
+.flex-6 {
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 960px) {
+  .flex-4, .contenido__bienvenida {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .flex-1, .header__principal {
+    justify-content: space-evenly;
+  }
+  .flex-6 {
+    flex-flow: row nowrap;
+  }
+}
+.col-3, .footer__links--box, .contenido__desc--box {
+  width: 351px;
+  height: auto;
+}
+
+.header__principal--menu ul,
+.header__carrousel,
+.header__portada,
+.header__portada--img {
+  width: 100%;
+}
+
+.header__contactrow {
+  display: none;
+  background-color: #2C82B8;
+  padding: 3px 0 0;
+}
+.header__contactrow div {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: right;
+  font-size: 1rem;
+}
+.header__contactrow div ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.header__contactrow div ul li {
+  color: #fff;
+  font-weight: 500;
+}
+.header__contactrow div ul li a {
+  padding-right: 10px;
+}
+.header__contactrow div ul li span {
+  padding: 0 5px 0 0;
+}
+.header__contactrow div ul li span a {
+  padding: 0;
+  margin: 0;
+}
+.header__contactrow div ul li a,
+.header__contactrow div ul li span a i {
+  color: inherit;
+}
+.header__contactrow div ul li a:hover,
+.header__contactrow div ul li span a i:hover {
+  color: #E8CEAA;
+}
+
+.header__principal {
+  padding: 5px 0 15px 0;
+  background: linear-gradient(180deg, #fff 5%, #ededed 100%);
+}
+
+.header__principal--logo {
+  padding-top: 7px;
+  text-align: left;
+}
 .header__principal--logo h1 span,
 .header__principal--logo h1 a span {
+  font-size: 1.563rem;
   display: block;
   margin-top: -11px;
 }
+.header__principal--logo h1 a {
+  font-family: "Oleo Script", cursive;
+  color: #2C82B8;
+}
+.header__principal--logo h1 a:hover {
+  color: #333;
+}
 
-/* Herramientas para forzar el estilo y la funcionalidad del carousel de Bootstrap (manipular lo menos posible). */
+.header__principal--menu {
+  padding-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header__principal--menu #enlace__menu__contactos__no,
+.header__principal--menu .hamburguesa,
+.header__principal--menu .cerrar {
+  color: #2C82B8;
+}
+.header__principal--menu .cerrar {
+  text-align: center;
+}
+.header__principal--menu .hamburguesa,
+.header__principal--menu .cerrar {
+  cursor: pointer;
+}
+.header__principal--menu .cerrar {
+  width: 28px;
+  height: 30px;
+}
+.header__principal--menu #check:checked ~ ul {
+  left: 0;
+  padding-left: 0;
+}
+.header__principal--menu ul {
+  position: fixed;
+  top: 93px;
+  left: -100%;
+  z-index: 999;
+  list-style: none;
+  background-color: #ededed;
+  transition: 0.5s;
+  height: 100vh;
+}
+.header__principal--menu ul li {
+  padding-top: 42px;
+  color: #333;
+  font-size: 1.45rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header__principal--menu ul li #iconos-resp {
+  padding-top: 50px;
+}
+.header__principal--menu ul li #enlace__menu__contactos__no {
+  display: block;
+}
+.header__principal--menu ul li a {
+  color: #2C82B8;
+}
+.header__principal--menu ul li a:hover {
+  color: #000;
+}
+.header__principal--menu ul li i {
+  font-size: 3.5rem;
+}
+.header__principal--menu ul li span {
+  margin: 0 20px 25px;
+}
+
 .carousel-indicators {
   margin-bottom: 7px !important;
 }
@@ -443,270 +414,94 @@ Arreglo para la altura de línea del logo de la cabecera */
   opacity: 0.7 !important;
 }
 
-/* Fin de las herramientas para forzar el estilo y la funcionalidad del carousel de Bootstrap.
-*** Fin de estilos generales.***/
-#contenedor {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "cabeza" "main" "footer";
-}
-
-#header {
-  grid-area: cabeza;
-}
-
-#contenido {
-  grid-area: main;
-}
-
-#footer {
-  grid-area: footer;
-}
-
-/* 2-B - Ancho y alto de las grillas, cajas flexibles y otros elementos */
-#header,
-.header__contactrow,
-.header__principal,
-.header__principal--menu ul,
-.header__carrousel,
-#contenido,
-.contenido__bienvenida,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc,
-#footer,
-.footer__links,
-.footer__links--box--redes,
-.footer__autor {
-  width: 100%;
-}
-
-#header,
-#contenido,
-#footer {
-  min-width: 375px;
-}
-
-.header__principal--container,
-.contenido__desc--container {
-  min-width: 325px;
-  width: 80%;
-}
-
-#header,
-.header__carrousel,
-.contenido__desc,
-.contenido__desc--box,
-.contenido__desc--box p,
-.footer__links,
-.footer__links--box p {
-  height: auto;
-}
-
-.header__principal--menu ul {
-  height: 100vh;
-}
-
-/* 2-C - Despliegue de las cajas (y otros elementos) */
-.header__principal,
-.header__principal--container,
-#iconos-resp,
-.contenido__bienvenida,
-.contenido__desc,
-.contenido__desc--container,
-.footer__links,
-.footer__links--box--redes,
-.footer__links--box--form ul {
-  display: flex;
-}
-
-.header__principal--menu ul li,
-.hamburguesa,
-#check:checked ~ .cerrar,
-.contenido__desc--box--btn,
-.footer__autor {
-  display: block;
-}
-
-.header__contactrow div,
-.header__contactrow div ul li,
-.header__principal--logo,
-.header__principal--menu,
-.header__principal--menu ul li span,
-.contenido__bienvenida--txt,
-.contenido__bienvenida--vid,
-.contenido__desc--box,
-.contenido__desc--info,
-.contenido__desc--recs,
-.footer__links--box,
-.footer__links--box--redes a,
-.footer__links--box--form {
-  display: inline-block;
-}
-
-.footer__links--box--ipt,
-.footer__links--box--btn {
-  display: inline;
-}
-
-.header__contactrow,
-.cerrar,
-#check,
-#check:checked ~ .hamburguesa,
-#enlace__menu__contactos {
-  display: none;
-}
-
-/* 2-D - Cajas flexibles predeterminadas */
-.flex-1,
-.flex-2,
-.flex-3,
-.flex-4,
-.flex-5,
-.flex-6 {
-  flex-flow: row wrap;
-}
-
-.flex-1,
-.flex-2 {
-  justify-content: space-around;
-}
-
-.flex-1,
-.flex-5 {
-  align-items: center;
-}
-
-.flex-6 {
-  align-items: flex-start;
-}
-
-.flex-3 {
-  justify-content: space-evenly;
-}
-
-.flex-4 {
-  justify-content: flex-start;
-}
-
-.flex-5,
-.flex-6 {
-  justify-content: space-between;
-}
-
-.header__contactrow div ul li a {
-  padding-right: 10px;
-}
-
-.header__contactrow div ul li span {
-  padding: 0 5px 0 0;
-}
-
-.header__contactrow div ul li span a {
-  padding: 0;
-  margin: 0;
-}
-
-.header__principal {
-  padding: 5px 0 15px 0;
-  background: linear-gradient(180deg, #fff 0%, #ededed 100%);
-}
-
-.header__principal--logo {
-  padding-top: 7px;
-}
-
-.header__principal--menu {
-  padding-top: 10px;
-}
-
-.header__principal--menu ul {
-  position: fixed;
-  top: 95px;
-  left: -100%;
-  z-index: 999;
-}
-
-.header__principal--menu ul li {
-  padding-top: 42px;
-}
-
-#iconos-resp {
-  padding-top: 50px;
-}
-
-#enlace__menu__contactos__no {
-  display: block;
-}
-
-.header__principal--menu ul li span {
-  margin: 0 20px 25px;
-}
-
-.cerrar {
-  width: 28px;
-  height: 30px;
-}
-
-#check:checked ~ ul {
-  left: 0;
-  padding-left: 0;
-}
-
-.header__portada,
-.header__portada--img {
-  width: 100%;
-}
-
 .contenido__bienvenida--txt {
   padding: 20px;
-  background-image: linear-gradient(180deg, #fff 45%, #E8CEAA 100%);
+  background: linear-gradient(180deg, #fff 45%, #E8CEAA 100%);
+  width: 100%;
+}
+.contenido__bienvenida--txt h2 {
+  font-weight: 650;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.contenido__bienvenida--txt p {
+  text-align: justify;
 }
 
 .contenido__bienvenida--vid {
   padding: 10px;
+  background-color: #2C82B8;
+  width: 100%;
 }
 
 .contenido__desc {
   margin-top: 30px;
 }
-
-.contenido__desc--box {
-  max-width: 351px;
-  padding-bottom: 30px;
-}
-
-.contenido__desc--box--img {
-  width: 351px;
-  height: 290px;
-  margin-bottom: 15px;
-}
-
-.contenido__desc--box--img a img {
-  width: 351px;
-  height: 290px;
-}
-
-.contenido__desc--box p {
-  padding: 0 5px;
-}
-
-.contenido__desc--box--btn {
-  position: relative;
-  width: 150px;
-  padding: 7px 5px;
-  margin: 0 auto;
-}
-
-/* 2-G - Herramientas para forzar la funcionalidad de la plantilla en resoluciones de ancho de pantalla mayores a 1023px y 1052px. */
-.ciego {
-  /* Este elemento sirve para forzar la ubicación del último bloque dentro de las cajas flexibles de 3 bloques en línea hacia el márgen izquierdo en lugar de ubicarse en el centro de la segunda fila al momento en que el ancho de pantalla supera los 701px.  */
+.contenido__desc .ciego {
   visibility: collapse;
   width: 351px;
   height: 1px;
   padding: 0 !important;
   margin: 0;
+}
+
+.contenido__desc--box {
+  padding: 0 0 30px;
+  text-align: center;
+}
+.contenido__desc--box h3 {
+  margin-bottom: 10px;
+}
+.contenido__desc--box h3 a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+  font-size: 1.5rem;
+}
+.contenido__desc--box h3 a:hover {
+  color: #FF99FF;
+}
+.contenido__desc--box p {
+  padding: 0 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contenido__desc--box .contenido__desc--box--img {
+  width: 351px;
+  height: 290px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.contenido__desc--box .contenido__desc--box--img a img {
+  width: 351px;
+  height: 290px;
+  transition: 1s;
+  cursor: pointer;
+}
+.contenido__desc--box .contenido__desc--box--img a img:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.contenido__desc--box .contenido__desc--box--btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  width: 150px;
+  padding: 7px 5px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-align: center;
+  background-color: #2C82B8;
+  border: 1px solid #444;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contenido__desc--box .contenido__desc--box--btn:hover {
+  color: #000;
+  font-weight: 600;
+  background-color: #FF99FF;
+  transition: 0.5s;
 }
 
 .contenido__desc--container {
@@ -716,6 +511,9 @@ Arreglo para la altura de línea del logo de la cabecera */
 .contenido__desc--info {
   margin-bottom: 15px;
 }
+.contenido__desc--info p {
+  text-align: justify;
+}
 
 .contenido__desc--info,
 .contenido__desc--recs,
@@ -724,54 +522,109 @@ Arreglo para la altura de línea del logo de la cabecera */
   height: auto;
 }
 
+.contenido__desc--serv p {
+  text-align: justify;
+}
+
 .contenido__desc--recs,
 .contenido__desc--serv {
   padding: 10px;
 }
 
+.contenido__desc--recs {
+  background-color: #2C82B8;
+}
+.contenido__desc--recs h3,
+.contenido__desc--recs h4,
+.contenido__desc--recs p {
+  color: #fff;
+}
+
 .footer__links {
   padding-top: 20px;
+  text-align: left;
+  background-color: #444;
 }
 
 .footer__links--box {
-  min-width: 351px;
-  padding-top: 20px;
+  padding: 20px 0 0;
 }
-
+.footer__links--box h1,
+.footer__links--box h2 {
+  color: #aaa;
+  margin-bottom: 0;
+}
+.footer__links--box h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+.footer__links--box h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 1.563rem;
+}
 .footer__links--box p {
   max-width: 351px;
+  height: auto;
+  line-height: 1.2;
+  color: #ccc;
+  text-align: justify;
+  margin-top: 5px;
+}
+.footer__links--box ul {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 0 0 15px;
+  color: #2C82B8;
+  list-style-image: url(../img/flecha-derecha-blanca.png);
+}
+.footer__links--box ul a {
+  color: #ccc;
+  font-size: 1rem;
+}
+.footer__links--box ul a:hover {
+  color: #FF99FF;
+  text-decoration: none;
+}
+.footer__links--box ul ul {
+  padding-left: 20px;
+}
+
+.footer__links--box--ctr {
+  text-align: center;
 }
 
 #footer__links--box--sm {
   padding-left: 60px;
 }
-
 #footer__links--box--sm ul {
   line-height: 1.45;
+}
+#footer__links--box--sm ul li {
+  font-size: 1.031rem;
 }
 
 .footer__links--box--redes {
   margin-top: 25px;
 }
-
-.footer__links--box ul {
-  margin: 0;
-  padding: 0 0 0 15px;
+.footer__links--box--redes a {
+  color: #aaa;
+  font-size: 4rem;
+  transition: 0.5s;
+  cursor: pointer;
 }
-
-.footer__links--box ul ul {
-  padding-left: 20px;
+.footer__links--box--redes a:hover {
+  color: #2C82B8;
+  transition: 0.5s;
 }
 
 .footer__links--box--form {
   margin: 5px 0 20px 0;
   padding: 0;
 }
-
 .footer__links--box--form ul {
   padding: 0;
+  list-style: none;
 }
-
 .footer__links--box--form ul li {
   flex: auto;
 }
@@ -781,6 +634,13 @@ Arreglo para la altura de línea del logo de la cabecera */
   border-right: 0;
   height: 35px;
   margin-right: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ccc;
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 7px;
+  background-color: #333;
+  border: 1px solid #666;
 }
 
 .footer__links--box--btn {
@@ -789,24 +649,54 @@ Arreglo para la altura de línea del logo de la cabecera */
   padding: 5px;
   border-left: 0;
   margin-left: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  background-color: #2C82B8;
+  border: 1px solid #666;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.footer__links--box--btn:hover {
+  color: #000;
+  font-weight: 600;
+  background-color: #FF99FF;
+  transition: 0.5s;
 }
 
 #footer__links--box--cont ul {
   padding: 0;
   margin: 10px 0 25px 0;
+  list-style: none;
 }
-
+#footer__links--box--cont ul li {
+  margin-bottom: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ccc;
+  font-size: 1rem;
+}
+#footer__links--box--cont ul li a {
+  font-size: 1rem;
+}
 #footer__links--box--cont ul i {
   margin-right: 10px;
   width: 16px;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
 }
-
-#footer__links--box--cont ul li {
-  margin-bottom: 5px;
+#footer__links--box--cont ul a {
+  font-size: 1rem;
+}
+#footer__links--box--cont ul a:hover {
+  color: #2C82B8;
 }
 
 .footer__autor {
-  height: 30px;
+  display: block;
+  background-color: #000;
   padding: 5px;
 }
 
@@ -850,10 +740,6 @@ Arreglo para la altura de línea del logo de la cabecera */
   }
 }
 @media only screen and (min-width: 960px) {
-  .flex-4 {
-    flex-flow: row nowrap;
-    justify-content: center;
-  }
   .contenido__bienvenida--txt {
     width: 50%;
   }
@@ -869,9 +755,6 @@ Arreglo para la altura de línea del logo de la cabecera */
 @media only screen and (min-width: 1024px) {
   .header__contactrow {
     display: block;
-    height: 30px;
-    padding-top: 3px;
-    text-align: center;
   }
   .header__contactrow div {
     min-width: 922px;
@@ -881,9 +764,6 @@ Arreglo para la altura de línea del logo de la cabecera */
   .header__contactrow div ul li {
     padding-left: 7px;
   }
-  .flex-1 {
-    justify-content: space-evenly;
-  }
   .header__principal {
     padding: 10px 0;
   }
@@ -891,7 +771,8 @@ Arreglo para la altura de línea del logo de la cabecera */
     min-width: 922px;
   }
   .header__principal--logo {
-    padding-top: 3px;
+    padding-top: 0;
+    padding-bottom: 3px;
   }
   #check,
 .hamburguesa,
@@ -955,9 +836,6 @@ Arreglo para la altura de línea del logo de la cabecera */
   }
   .contenido__desc--recs {
     width: 33%;
-  }
-  .flex-6 {
-    flex-flow: row nowrap;
   }
 }
 @media only screen and (max-width: 1052px) {

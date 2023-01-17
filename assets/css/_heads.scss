@@ -1,68 +1,211 @@
 @use '_vars' as *;
+@use '_predef' as *;
 
-.header__contactrow div ul li a {
-    padding-right: map-get($abs_lng,"10px");
-}
-
-.header__contactrow div ul li span {
-    padding: map-get($num_int,"0") map-get($abs_lng,"5px") map-get($num_int,"0") map-get($num_int,"0");
-}
-
-.header__contactrow div ul li span a {
-    padding: map-get($num_int,"0");
-    margin: map-get($num_int,"0");
-}
-
-.header__principal {
-    padding: map-get($abs_lng,"5px") map-get($num_int,"0") map-get($abs_lng,"5px") * 3 map-get($num_int,"0");
-    background: linear-gradient(map-get($angles,"10°") * 18, map-get($color,"blanco") map-get($per_cent,"0"), map-get($color,"gris_06") map-get($per_cent,"100"));
-}
-
-.header__principal--logo {
-    padding-top: map-get($abs_lng,"7px");
-}
-
-.header__principal--menu {
-    padding-top: map-get($abs_lng,"10px");
-}
-
-.header__principal--menu ul {
-    position: map-get($pos,"fix");
-    top: map-get($abs_lng,"100px") - map-get($abs_lng,"5px");
-    left: - map-get($per_cent,"100");
-    z-index: map-get($num_int,"100") * 10 - map-get($num_int,"1");
-}
-
-.header__principal--menu ul li {
-    padding-top: map-get($abs_lng,"3px") * 14;
-}
-
-#iconos-resp {
-    padding-top: map-get($abs_lng,"50px");
-}
-
-#enlace__menu__contactos__no {
-    display: map-get($disp,"blk");
-}
-
-.header__principal--menu ul li span {
-    margin: map-get($num_int,"0") map-get($abs_lng,"10px") * 2 map-get($abs_lng,"25px");
-}
-
-.cerrar {
-    width: map-get($abs_lng,"25px") + map-get($abs_lng,"3px");
-    height: map-get($abs_lng,"10px") * 3;
-}
-
-#check:checked~ul {
-    left: map-get($num_int,"0");
-    padding-left: map-get($num_int,"0");
-}
-
-//********************
-// Estilos de las secciones
-
+.header__principal--menu ul,
+.header__carrousel,
 .header__portada,
 .header__portada--img {
     width: map-get($per_cent,"100");
+}
+
+.header__contactrow {
+    @include row-full-wth_edit($dsp: map-get($glob_kw,"none"), $bg_c: map-get($color,"azul"), $padd: map-get($abs_lng,"3px") map-get($num_int,"0") map-get($num_int,"0"));
+
+    div {
+        font-family: $fam_02;
+        text-align: map-get($pos, "rgt");
+        font-size: map-get($rel_lng, "1");
+
+        ul {
+            padding-left: map-get($num_int, "0");
+            margin-bottom: map-get($num_int, "0");
+            list-style: map-get($glob_kw, "none");
+
+            li {
+                color: map-get($color, "blanco");
+                font-weight: map-get($num_int, "100") * 5;
+
+                a {
+                    padding-right: map-get($abs_lng, "10px");
+                }
+
+                span {
+                    padding: map-get($num_int, "0") map-get($abs_lng, "5px") map-get($num_int, "0") map-get($num_int, "0");
+
+                    a {
+                        padding: map-get($num_int, "0");
+                        margin: map-get($num_int, "0");
+                    }
+                }
+
+                a,
+                span a i {
+                    color: map-get($glob_kw, "inh");
+
+                    &:hover {
+                        color: map-get($color, "beige");
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+.header__principal {
+    @extend .flex-1;
+    padding: map-get($abs_lng, "5px") map-get($num_int, "0") map-get($abs_lng, "5px") * 3 map-get($num_int, "0");
+    background: linear-gradient(map-get($angles, "10°") * 18, map-get($color, "blanco") map-get($per_cent, "5"), map-get($color, "gris_06") map-get($per_cent, "100"));
+}
+
+.header__principal--container {
+    @extend .flex-5;
+}
+
+.header__principal--logo {
+    padding-top: map-get($abs_lng, "7px");
+    text-align: map-get($pos, "lft");
+
+    h1 span,
+    h1 a span {
+        font-size: map-get($rel_lng, "1.563");
+        display: map-get($disp, "blk");
+        margin-top: - map-get($abs_lng, "10px") + - map-get($abs_lng, "1px");
+    }
+
+    h1 a {
+        font-family: $fam_01;
+        color: map-get($color, "azul");
+    }
+
+    h1 a:hover {
+        color: map-get($color, "gris_01");
+    }
+}
+
+.header__principal--menu {
+    padding-top: map-get($abs_lng, "10px");
+    font-family: $fam_02;
+
+    #enlace__menu__contactos__no,
+    .hamburguesa,
+    .cerrar {
+        color: map-get($color, "azul");
+    }
+
+    .cerrar {
+        text-align: map-get($pos, "ctr");
+    }
+
+    .hamburguesa,
+    .cerrar {
+        cursor: $cursor;
+    }
+
+    .cerrar {
+        width: map-get($abs_lng, "25px") + map-get($abs_lng, "3px");
+        height: map-get($abs_lng, "10px") * 3;
+    }
+
+    #check:checked~ul {
+        left: map-get($num_int, "0");
+        padding-left: map-get($num_int, "0");
+    }
+
+    ul {
+        position: map-get($pos, "fix");
+        top: map-get($abs_lng, "100px") - map-get($abs_lng, "7px");
+        left: - map-get($per_cent, "100");
+        z-index: map-get($num_int, "100") * 10 - map-get($num_int, "1");
+        list-style: map-get($glob_kw, "none");
+        background-color: map-get($color, "gris_06");
+        transition: map-get($times, "m_seg");
+        height: $vh_100;
+
+        li {
+            padding-top: map-get($abs_lng, "3px") * 14;
+            color: map-get($color, "gris_01");
+            font-size: map-get($rel_lng, "1.45");
+            font-weight: map-get($num_int, "100") * 6;
+            text-transform: $mayusc;
+            text-align: map-get($pos, "ctr");
+
+            #iconos-resp {
+                @extend .flex-3;
+                padding-top: map-get($abs_lng,"50px");
+            }
+            
+            #enlace__menu__contactos__no {
+                display: map-get($disp,"blk");
+            }
+
+            a {
+                color: map-get($color, "azul");
+
+                &:hover {
+                    color: map-get($color, "negro");
+                }
+            }
+
+            i {
+                font-size: map-get($rel_lng, "3.5");
+            }
+
+            span {
+                margin: map-get($num_int, "0") map-get($abs_lng, "10px") * 2 map-get($abs_lng, "25px");
+            }
+        }
+    }
+}
+
+.carousel-indicators {
+    margin-bottom: map-get($abs_lng,"7px") !important;
+}
+
+.carousel-indicators button {
+    background-color: map-get($color,"negro") !important;
+    width: map-get($abs_lng,"3px") * 4 !important;
+    height: map-get($abs_lng,"3px") * 4 !important;
+    border-radius: map-get($per_cent,"100") !important;
+    margin: map-get($num_int,"0") map-get($abs_lng,"7px") !important;
+    border: map-get($abs_lng,"7px") !important;
+    opacity: map-get($num_dec,"0.3") !important;
+    transition: map-get($times,"m_seg") !important;
+}
+
+.carousel-indicators button.active {
+    background-color: map-get($color,"azul") !important;
+    opacity: map-get($num_dec,"0.5") !important;
+    transition: map-get($times,"m_seg") !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../img/arrow-left.svg) !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../img/arrow-right.svg) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: map-get($rel_lng,"2.5") !important;
+    width: map-get($rel_lng,"2.5") !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-prev,
+.carousel-control-next-icon,
+.carousel-control-next {
+    opacity: map-get($num_dec,"0.5") !important;
+    transition: map-get($times,"m_seg") !important;
+    visibility: map-get($vis,"no_vis") !important;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-prev:hover,
+.carousel-control-next-icon:hover,
+.carousel-control-next:hover {
+    opacity: map-get($num_dec,"0.7") !important;
 }

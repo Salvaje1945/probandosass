@@ -1,50 +1,109 @@
 @use '_vars' as *;
+@use '_predef' as *;
 
 .footer__links {
+    @extend .flex-3;
     padding-top: map-get($abs_lng,"10px") * 2;
+    text-align: map-get($pos,"lft");
+    background-color: map-get($color,"gris_02");
 }
 
 .footer__links--box {
-    min-width: map-get($abs_lng,"3px") * 117;
-    padding-top: map-get($abs_lng,"10px") * 2;
+    @include col-3_edit($padd_ed: map-get($abs_lng,"10px") * 2 map-get($num_int,"0") map-get($num_int,"0"));
+
+    h1,
+    h2 {
+        color: map-get($color,"gris_04");
+        margin-bottom: map-get($num_int,"0");
+    }
+    
+    h1 {
+        font-size: map-get($rel_lng,"3");
+        line-height: map-get($num_int,"1");
+    }
+
+    h2 {
+        font-family: $fam_01;
+        font-size: map-get($rel_lng,"1.563");
+    }
+
+    p {
+        max-width: map-get($abs_lng,"3px") * 117;
+        height: map-get($glob_kw,"auto");
+        line-height: map-get($num_dec,"1.2");
+        color: map-get($color,"gris_05");
+        text-align: map-get($pos,"jtf");
+        margin-top: map-get($abs_lng,"5px");
+    }
+
+    ul {
+        font-family: $fam_02;
+        margin: map-get($num_int,"0");
+        padding: map-get($num_int,"0") map-get($num_int,"0") map-get($num_int,"0") map-get($abs_lng,"5px") * 3;
+        color: map-get($color,"azul");
+        list-style-image: url(../img/flecha-derecha-blanca.png);
+
+        a {
+            color: map-get($color,"gris_05");
+            font-size: map-get($rel_lng,"1");
+
+            &:hover {
+                color: map-get($color,"rosa");
+                text-decoration: map-get($glob_kw,"none");
+            }
+        }
+
+        ul {
+            padding-left: map-get($abs_lng,"10px") * 2;
+        }
+    }
 }
 
-.footer__links--box p {
-    max-width: map-get($abs_lng,"3px") * 117;
+.footer__links--box--ctr {
+    text-align: map-get($pos,"ctr");
 }
 
 #footer__links--box--sm {
     padding-left: map-get($abs_lng,"10px") * 6;
-}
+    
+    ul {
+        line-height: map-get($num_dec,"1.45");
 
-#footer__links--box--sm ul {
-    line-height: map-get($num_dec,"1.45");
+        li {
+            font-size: map-get($rel_lng,"1.031");
+        }
+    }
 }
 
 .footer__links--box--redes {
+    @extend .flex-2;
     margin-top: map-get($abs_lng,"25px");
-}
 
-.footer__links--box ul {
-    margin: map-get($num_int,"0");
-    padding: map-get($num_int,"0") map-get($num_int,"0") map-get($num_int,"0") map-get($abs_lng,"5px") * 3;
-}
+    a {
+        color: map-get($color,"gris_04");
+        font-size: map-get($rel_lng,"4");
+        transition: map-get($times,"m_seg");
+        cursor: $cursor;
 
-.footer__links--box ul ul {
-    padding-left: map-get($abs_lng,"10px") * 2;
+        &:hover {
+            color: map-get($color,"azul");
+            transition: map-get($times,"m_seg");
+        }
+    }
 }
 
 .footer__links--box--form {
     margin: map-get($abs_lng,"5px") map-get($num_int,"0") map-get($abs_lng,"10px") * 2 map-get($num_int,"0");
     padding: map-get($num_int,"0");
-}
 
-.footer__links--box--form ul {
-    padding: map-get($num_int,"0");
-}
+    ul {
+        padding: map-get($num_int,"0");
+        list-style: map-get($glob_kw,"none");
 
-.footer__links--box--form ul li {
-    flex: map-get($glob_kw,"auto");
+        li {
+            flex: map-get($glob_kw,"auto");
+        }
+    }
 }
 
 .footer__links--box--ipt {
@@ -52,6 +111,13 @@
     border-right: map-get($num_int,"0");
     height: map-get($abs_lng,"5px") * 7;
     margin-right: map-get($num_int,"0");
+    font-family: $fam_02;
+    color: map-get($color,"gris_05");
+    font-size: map-get($rel_lng,"1");
+    font-style: $ital;
+    padding-left: map-get($abs_lng,"7px");
+    background-color: map-get($color,"gris_01");
+    border: map-get($abs_lng,"1px") $solid map-get($color,"gris_03");
 }
 
 .footer__links--box--btn {
@@ -60,23 +126,61 @@
     padding: map-get($abs_lng,"5px");
     border-left: map-get($num_int,"0");
     margin-left: map-get($num_int,"0");
+    font-family: $fam_02;
+    color: map-get($color,"blanco");
+    font-size: map-get($rel_lng,"1");
+    font-weight: map-get($glob_kw,"norm");
+    text-align: map-get($pos,"ctr");
+    background-color: map-get($color,"azul");
+    border: map-get($abs_lng,"1px") $solid map-get($color,"gris_03");
+    transition: map-get($times,"m_seg");
+    cursor: $cursor;
+
+    &:hover {
+        color: map-get($color,"negro");
+        font-weight: map-get($num_int,"100") * 6;
+        background-color: map-get($color,"rosa");
+        transition: map-get($times,"m_seg");
+    }
 }
 
-#footer__links--box--cont ul {
-    padding: map-get($num_int,"0");
-    margin: map-get($abs_lng,"10px") map-get($num_int,"0") map-get($abs_lng,"25px") map-get($num_int,"0");
-}
+#footer__links--box--cont {
+    
+    ul {
+        padding: map-get($num_int,"0");
+        margin: map-get($abs_lng,"10px") map-get($num_int,"0") map-get($abs_lng,"25px") map-get($num_int,"0");
+        list-style: map-get($glob_kw,"none");
 
-#footer__links--box--cont ul i {
-    margin-right: map-get($abs_lng,"10px");
-    width: map-get($abs_lng,"5px") * 3 + map-get($abs_lng,"1px");
-}
+        li {
+            margin-bottom: map-get($abs_lng,"5px");
+            font-family: $fam_02;
+            color: map-get($color,"gris_05");
+            font-size: map-get($rel_lng,"1");
 
-#footer__links--box--cont ul li {
-    margin-bottom: map-get($abs_lng,"5px");
+            a {
+                font-size: map-get($rel_lng,"1");
+            }
+        }
+
+        i {
+            margin-right: map-get($abs_lng,"10px");
+            width: map-get($abs_lng,"5px") * 3 + map-get($abs_lng,"1px");
+            color: map-get($color,"blanco");
+            font-size: map-get($rel_lng,"1");
+            text-align: map-get($pos,"ctr");
+        }
+
+        a {
+            font-size: map-get($rel_lng,"1");
+            
+            &:hover {
+            color: map-get($color,"azul");
+            }
+        }
+    }
+
 }
 
 .footer__autor {
-    height: map-get($abs_lng,"10px") * 3;
-    padding: map-get($abs_lng,"5px");
+    @include row-full-wth_edit($dsp: map-get($disp,"blk"), $bg_c: map-get($color,"negro"), $padd: map-get($abs_lng,"5px"));
 }
