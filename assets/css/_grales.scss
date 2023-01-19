@@ -9,17 +9,17 @@ html,
 }
 
 * {
-    padding: map-get($num_int,"0");
-    margin: map-get($num_int,"0");
-    outline: map-get($num_int,"0");
-    border: map-get($num_int,"0");
-    font-style: map-get($glob_kw,"inh");
-    font-weight: map-get($glob_kw,"inh");
-    font-family: map-get($glob_kw,"inh");
-    margin-block-start: map-get($num_int,"0");
-    margin-block-end: map-get($num_int,"0");
-    margin-inline-start: map-get($num_int,"0");
-    margin-inline-end: map-get($num_int,"0");
+    padding: map-get($num_int, "0");
+    margin: map-get($num_int, "0");
+    outline: map-get($num_int, "0");
+    border: map-get($num_int, "0");
+    font-style: map-get($glob_kw, "inh");
+    font-weight: map-get($glob_kw, "inh");
+    font-family: map-get($glob_kw, "inh");
+    margin-block-start: map-get($num_int, "0");
+    margin-block-end: map-get($num_int, "0");
+    margin-inline-start: map-get($num_int, "0");
+    margin-inline-end: map-get($num_int, "0");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
@@ -27,21 +27,22 @@ html,
 // Estilos generales para el texto.
 
 a {
-    text-decoration: map-get($glob_kw,"none") !important;
+    text-decoration: map-get($glob_kw, "none") !important;
 }
 
 p {
-    margin-block-start: map-get($num_int,"0");
-    margin-block-end: map-get($num_int,"0");
-    font-size: map-get($rel_lng,"0.875");
-    color: map-get($color,"negro");
+    margin-block-start: map-get($num_int, "0");
+    margin-block-end: map-get($num_int, "0");
+    font-size: map-get($rel_lng, "0.875");
+    color: map-get($color, "negro");
+    margin: map-get($num_int, "0");
 }
 
 h1 {
     font-family: $fam_01;
-    color: map-get($color,"azul");
-    margin: 0;
-    font-size: map-get($rel_lng,"2.5");
+    color: map-get($color, "azul");
+    margin: map-get($num_int, "0");
+    font-size: map-get($rel_lng, "2.5");
 }
 
 p,
@@ -54,42 +55,42 @@ h5 {
 }
 
 h2 {
-    font-size: map-get($rel_lng,"1.875");
+    font-size: map-get($rel_lng, "1.875");
 }
 
 h3 {
-    font-size: map-get($rel_lng,"1.5");
+    font-size: map-get($rel_lng, "1.5");
 }
 
 h2,
 h3 {
-    color: map-get($color,"gris_02");
-    font-weight: map-get($num_int,"100") * 6;
+    color: map-get($color, "gris_02");
+    font-weight: map-get($num_int, "100") * 6;
 }
 
 h4 {
-    color: map-get($color,"blanco");
-    font-size: map-get($rel_lng,"1");
+    color: map-get($color, "blanco");
+    font-size: map-get($rel_lng, "1");
 }
 
 
 h5 {
-    color: map-get($color,"gris_03");
-    font-size: map-get($rel_lng,"0.9");
+    color: map-get($color, "gris_03");
+    font-size: map-get($rel_lng, "0.9");
 }
 
 p,
 h4,
 h5 {
-    font-weight: map-get($glob_kw,"norm");
+    font-weight: map-get($glob_kw, "norm");
 }
 
 // Estructura básica del sitio
 
 #contenedor {
-    display: map-get($disp,"grd");
-    grid-template-columns: map-get($per_cent,"100");
-    grid-template-rows: repeat(3, map-get($glob_kw,"auto"));
+    display: map-get($disp, "grd");
+    grid-template-columns: map-get($per_cent, "100");
+    grid-template-rows: repeat(3, map-get($glob_kw, "auto"));
     grid-template-areas:
 
         "cabeza"
@@ -101,42 +102,40 @@ h5 {
     #header,
     #contenido,
     #footer {
-        min-width: map-get($wth_res,"mob_02");
-        width: map-get($per_cent,"100");
+        min-width: map-get($wth_res, "mob_02");
+        width: map-get($per_cent, "100");
     }
 
     #header {
         grid-area: cabeza;
-        height: map-get($glob_kw,"auto");      
+        height: map-get($glob_kw, "auto");
     }
-    
+
     #contenido {
         grid-area: main;
     }
-    
+
     #footer {
         grid-area: footer;
     }
-
-    
 }
 
 .header__principal--container,
 .contenido__desc--container {
-    min-width: map-get($wth_res,"mob_01");
-    width: map-get($per_cent,"10") * 8;
+    min-width: map-get($wth_res, "mob_01");
+    width: map-get($per_cent, "10") * 8;
 }
 
 .contenido__desc--container,
 .footer__links--box--form ul {
-    display: map-get($disp,"flex");
+    display: map-get($disp, "flex");
 }
 
 .header__principal--menu ul li,
 .hamburguesa,
 #check:checked~.cerrar,
 .contenido__desc--box--btn {
-    display: map-get($disp,"blk");
+    display: map-get($disp, "blk");
 }
 
 .header__contactrow div,
@@ -152,17 +151,17 @@ h5 {
 .footer__links--box,
 .footer__links--box--redes a,
 .footer__links--box--form {
-    display: map-get($disp,"blk_lin");
+    display: map-get($disp, "blk_lin");
 }
 
 .footer__links--box--ipt,
 .footer__links--box--btn {
-    display: map-get($disp,"lin");
+    display: map-get($disp, "lin");
 }
 
 .cerrar,
 #check,
 #check:checked~.hamburguesa,
 #enlace__menu__contactos {
-    display: map-get($glob_kw,"none");
+    display: map-get($glob_kw, "none");
 }
