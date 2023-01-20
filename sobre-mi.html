@@ -47,11 +47,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="header__principal flex-1">
-                <div class="header__principal--container flex-5">
+            <div class="header__principal">
+                <div class="header__principal--container">
                     <div class="header__principal--logo">
                         <h1>
-                            <a href="index.html">Isabel Rivas<br>
+                            <a href="index.html" title="Regresar al inicio">Isabel Rivas<br>
                                 <span>Acompañante terapéutica</span>
                             </a>
                         </h1>
@@ -76,7 +76,7 @@
                                 <a href="#Contactos">Contactos</a>
                             </li>
                             <li id="enlace__menu__contactos__no">Contactos:</li>
-                            <li id="iconos-resp" class="flex-3">
+                            <li id="iconos-resp">
                                 <span>
                                     <a href="https://api.whatsapp.com/send?phone=5491136990048" target="_blank" rel="noopener noreferrer">
                                         <i class="fa-brands fa-whatsapp"></i>
@@ -112,24 +112,58 @@
                     </nav>
                 </div>
             </div>
-            <div class="header__portada">
-                <img class="header__portada--img" src="assets/img/sobre-mi.jpg" alt="Sobre mi: experiencia laboral, formación profesional, visión, misión y más">
+            <div class="header__carrousel">
+                <div class="header__carrousel--container">
+                    <div class="header__carrousel--txt">
+                        <div>
+                            <h2>S<span>o</span>bre mí</h2>
+                        </div>
+                    </div>
+                    <div class="header__carrousel--car">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/img_sobremi1.jpg" class="d-block w-100" alt="Cuidar y acompañar a quienes lo necesitan es una vocación de servicio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/img_sobremi2.jpg" class="d-block w-100" alt="Nuestros adultos mayores merecen cariño y compañía, pero también responsabilidad y entrega.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/img_sobremi3.jpg" class="d-block w-100" alt="La mente es un músculo que requiere ser ejercitado correctamente.">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <main id="contenido">
-            <section class="contenido__bienvenida flex-4">
+            <section class="contenido__bienvenida">
                 <article class="contenido__bienvenida--txt">
-                    <h2>Mi historia</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque varius et nunc a ullamcorper. Maecenas at velit elit. Duis laoreet nulla vel purus aliquet, vel tincidunt ex fringilla. Ut at egestas leo. Donec a ipsum cursus, interdum turpis a, ullamcorper velit. Maecenas consequat malesuada mauris et vehicula. Donec in viverra risus, nec tempor dolor. Phasellus mauris dui, feugiat eu lorem sed, pellentesque facilisis mi. Proin ultricies risus nec diam mollis tempor. In bibendum non risus sit amet facilisis. Suspendisse vitae dictum mi, eu molestie diam. In nec nisi ornare ipsum pellentesque pharetra. Donec eget nulla in massa venenatis rhoncus. Curabitur id pharetra nisi, ac posuere nulla.</p>
+                    <h2>¿Quién soy yo?</h2>
+                    <p>Mi nombre es Isabel Rivas y soy una profesional titulada y certificada que, desde hace más de 12 años, se dedica al cuidado y el acompañamiento de aquellos adultos mayores cuyos familiares no pueden hacerse cargo de ellos (ya fuera por cuestiones de tiempo, distancia o trabajo) o necesitan una ayuda extra para lograr que la vida de sus papás y/o abuelos resulte más amena y feliz. Además de trabajar con adultos mayores y sus familiares, me dedico a brindar charlas y seminarios dirigidos a jóvenes estudiantes de la carrera de acompañamiento terapéutico con el fin de ayudar a la mejor formación de estos futuros profesionales poniendo a su disposición todos los conocimientos que he adquirido durante mis largos años como profesional en la materia. </p>
                 </article>
                 <article class="contenido__bienvenida--vid">
                     <div>
-                        <iframe width="100%" height="315" style="display:block;" src="https://www.youtube.com/embed/kjFY5Y9hvws" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="450" style="display:block;" src="https://www.youtube.com/embed/kjFY5Y9hvws" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </article>
             </section>
-            <section class="contenido__desc flex-3">
-                <div class="contenido__desc--container flex-6">
+            <section class="contenido__desc">
+                <div class="contenido__desc--container">
                     <article class="contenido__desc--info">
                         <h3>Formación profesional:</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique leo ut aliquam laoreet. Nulla et purus sed massa condimentum sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin interdum arcu mi, nec placerat lorem mattis in. Nullam accumsan mauris eget lorem auctor maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque luctus pharetra sem, sit amet dictum nulla volutpat fringilla. Quisque felis neque, dictum quis justo sed, finibus malesuada libero. Maecenas rhoncus sit amet purus ut lobortis.<br><br>
@@ -169,12 +203,12 @@
             </section>
         </main>
         <footer id="footer">
-            <div class="footer__links flex-3">
+            <div class="footer__links">
                 <div class="footer__links--box">
                     <div class="footer__links--box--ctr">
                         <h1>Isabel Rivas</h1>
                         <h2>Acompañante terapéutica</h2>
-                        <div class="footer__links--box--redes flex-2">
+                        <div class="footer__links--box--redes">
                             <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>

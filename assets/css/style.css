@@ -2,7 +2,6 @@
 html,
 :root {
   font-size: 16px !important;
-  scroll-behavior: auto;
 }
 
 * {
@@ -316,7 +315,7 @@ h5 {
   color: #2C82B8;
 }
 .header__principal--logo h1 a:hover {
-  color: #333;
+  color: #444;
 }
 
 .header__principal--menu {
@@ -429,6 +428,53 @@ h5 {
 .carousel-control-next-icon:hover,
 .carousel-control-next:hover {
   opacity: 0.7 !important;
+}
+
+.header__carrousel--container {
+  position: relative;
+  display: block;
+}
+
+.header__carrousel--txt {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 65%;
+  background-image: url(../img/decorado-fondo.png);
+  background-size: cover;
+  padding: 10px;
+  z-index: 998;
+}
+.header__carrousel--txt div {
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.header__carrousel--txt div h2 {
+  font-family: "Oleo Script", cursive;
+  display: table-cell;
+  text-align: center;
+  padding-right: 2vw;
+  margin: 0;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 12vw;
+  -webkit-text-stroke: 0.2vw #333;
+  text-shadow: #000 0.5vw 0.5vh 4px;
+}
+.header__carrousel--txt div h2 span {
+  letter-spacing: 0.5vw;
+}
+
+.header__carrousel--car {
+  position: relative;
+  display: block;
 }
 
 .contenido__bienvenida--txt {
