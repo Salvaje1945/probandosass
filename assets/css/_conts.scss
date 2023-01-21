@@ -7,7 +7,8 @@
 
 .contenido__bienvenida--txt {
     padding: map-get($abs_lng, "10px") * 2;
-    background: linear-gradient(map-get($angles, "10°") * 18, map-get($color, "blanco") map-get($per_cent, "50") - map-get($per_cent, "5"), map-get($color, "beige") map-get($per_cent, "100"));
+    // background: linear-gradient(map-get($angles, "10°") * 18, map-get($color, "azul") map-get($per_cent, "0"), map-get($color, "rosa") map-get($per_cent, "100"));
+    background-color: map-get($color, "rosa_02");
     width: map-get($per_cent, "100");
 
     h2 {
@@ -97,14 +98,35 @@
 }
 
 .contenido__desc--container {
+    @extend .flex-6;
     margin-bottom: map-get($abs_lng, "10px") * 3;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 1.650rem;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 1.125rem;
+    }
+
 }
 
 .contenido__desc--info {
     margin-bottom: map-get($abs_lng, "5px") * 3;
 
+    article {
+        margin-bottom: 25px;
+    }
+
     p {
         text-align: map-get($pos, "jtf");
+        margin-bottom: 15px;
+        line-height: 1.35;
     }
 }
 

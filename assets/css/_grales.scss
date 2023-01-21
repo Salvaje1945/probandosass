@@ -63,7 +63,7 @@ h3 {
 
 h2,
 h3 {
-    color: map-get($color, "gris_02");
+    color: map-get($color, "negro");
     font-weight: map-get($num_int, "100") * 6;
 }
 
@@ -125,7 +125,6 @@ h5 {
     width: map-get($per_cent, "10") * 8;
 }
 
-.contenido__desc--container,
 .footer__links--box--form ul {
     display: map-get($disp, "flex");
 }

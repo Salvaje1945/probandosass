@@ -57,8 +57,6 @@
         width: map-get($per_cent, "50");
     }
 
-
-    // font-size: map-get($rel_lng, "1.125");
 }
 
 @media only screen and (max-width: map-get($brk_pts, "bp_02")) {
@@ -87,7 +85,8 @@
 
     }
 
-    .header__principal--container {
+    .header__principal--container,
+    .contenido__desc--container {
         min-width: map-get($wth_res, "pst_tbl");
     }
 
@@ -159,14 +158,9 @@
         line-height: map-get($num_dec, "1.35");
     }
 
-    // .contenido__desc--box p {
-    //     font-size: map-get($rel_lng, "0.9");
-    //     line-height: map-get($num_dec, "1.3");
+    // .contenido__desc--container {
+    //     max-width: map-get($wth_res, "pst_tbl");
     // }
-
-    .contenido__desc--container {
-        max-width: map-get($wth_res, "pst_tbl");
-    }
 
     .contenido__desc--info {
         width: map-get($per_cent, "3") * 22;
@@ -259,7 +253,7 @@
     .header__principal--container,
     .contenido__desc--container {
         min-width: map-get($wth_res, "dkp_01");
-        width: map-get($glob_kw, "auto");
+        // width: map-get($glob_kw, "auto");
     }
 
     .header__principal--logo {
@@ -285,13 +279,9 @@
         line-height: map-get($num_dec, "1.45");
     }
     
-    .contenido__desc--info p,
-    .contenido__desc--serv p {
-        font-size: map-get($rel_lng, "1.125");
-    }
-
-    // .contenido__desc--box p {
-    //     font-size: map-get($rel_lng, "1");
+    // .contenido__desc--info p,
+    // .contenido__desc--serv p {
+    //     font-size: map-get($rel_lng, "1.125");
     // }
 }
 

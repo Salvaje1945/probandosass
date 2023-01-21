@@ -49,7 +49,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
 }
 
 h2 {
@@ -62,7 +62,7 @@ h3 {
 
 h2,
 h3 {
-  color: #444;
+  color: #000;
   font-weight: 600;
 }
 
@@ -111,7 +111,6 @@ h5 {
   width: 80%;
 }
 
-.contenido__desc--container,
 .footer__links--box--form ul {
   display: flex;
 }
@@ -168,7 +167,8 @@ h5 {
 .contenido__bienvenida,
 .flex-5,
 .header__principal--container,
-.flex-6 {
+.flex-6,
+.contenido__desc--container {
   display: flex;
   flex-flow: row wrap;
 }
@@ -197,7 +197,7 @@ h5 {
   align-items: center;
 }
 
-.flex-6 {
+.flex-6, .contenido__desc--container {
   align-items: flex-start;
 }
 
@@ -210,7 +210,8 @@ h5 {
 }
 
 .flex-5, .header__principal--container,
-.flex-6 {
+.flex-6,
+.contenido__desc--container {
   justify-content: space-between;
 }
 
@@ -224,7 +225,7 @@ h5 {
   .flex-1, .header__principal {
     justify-content: space-evenly;
   }
-  .flex-6 {
+  .flex-6, .contenido__desc--container {
     flex-flow: row nowrap;
   }
 }
@@ -234,7 +235,7 @@ h5 {
 }
 
 .btn-fx, .footer__links--box--btn, .contenido__desc--box .contenido__desc--box--btn {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   color: #fff;
   font-weight: normal;
   text-align: center;
@@ -263,7 +264,7 @@ h5 {
   padding: 3px 0 0;
 }
 .header__contactrow div {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   text-align: right;
   font-size: 1rem;
 }
@@ -320,7 +321,7 @@ h5 {
 
 .header__principal--menu {
   padding-top: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
 }
 .header__principal--menu #enlace__menu__contactos__no,
 .header__principal--menu .hamburguesa,
@@ -479,7 +480,7 @@ h5 {
 
 .contenido__bienvenida--txt {
   padding: 20px;
-  background: linear-gradient(180deg, #fff 45%, #E8CEAA 100%);
+  background-color: #f4b9b9;
   width: 100%;
 }
 .contenido__bienvenida--txt h2 {
@@ -517,7 +518,7 @@ h5 {
   margin-bottom: 10px;
 }
 .contenido__desc--box h3 a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   color: #444;
   font-size: 1.5rem;
 }
@@ -557,12 +558,27 @@ h5 {
 .contenido__desc--container {
   margin-bottom: 30px;
 }
+.contenido__desc--container h2 {
+  margin-bottom: 25px;
+}
+.contenido__desc--container h3 {
+  font-size: 1.65rem;
+  margin-bottom: 15px;
+}
+.contenido__desc--container p {
+  font-size: 1.125rem;
+}
 
 .contenido__desc--info {
   margin-bottom: 15px;
 }
+.contenido__desc--info article {
+  margin-bottom: 25px;
+}
 .contenido__desc--info p {
   text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.35;
 }
 
 .contenido__desc--info,
@@ -621,7 +637,7 @@ h5 {
   margin-top: 5px;
 }
 .footer__links--box ul {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   margin: 0;
   padding: 0 0 0 15px;
   color: #2C82B8;
@@ -684,7 +700,7 @@ h5 {
   border-right: 0;
   height: 35px;
   margin-right: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   color: #ccc;
   font-size: 1rem;
   font-style: italic;
@@ -709,7 +725,7 @@ h5 {
 }
 #footer__links--box--cont ul li {
   margin-bottom: 5px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
   color: #ccc;
   font-size: 1rem;
 }
@@ -801,7 +817,8 @@ h5 {
   .header__principal {
     padding: 10px 0;
   }
-  .header__principal--container {
+  .header__principal--container,
+.contenido__desc--container {
     min-width: 922px;
   }
   .header__principal--logo {
@@ -860,9 +877,6 @@ h5 {
 .contenido__desc--serv p {
     font-size: 1rem;
     line-height: 1.35;
-  }
-  .contenido__desc--container {
-    max-width: 922px;
   }
   .contenido__desc--info {
     width: 66%;
@@ -935,7 +949,6 @@ h5 {
   .header__principal--container,
 .contenido__desc--container {
     min-width: 1280px;
-    width: auto;
   }
   .header__principal--logo {
     margin-left: 20px;
@@ -954,10 +967,6 @@ h5 {
   .contenido__bienvenida--txt p {
     font-size: 1.35rem;
     line-height: 1.45;
-  }
-  .contenido__desc--info p,
-.contenido__desc--serv p {
-    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1330px) {
