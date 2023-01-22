@@ -82,6 +82,25 @@ h5 {
   font-weight: normal;
 }
 
+.migas_pan {
+  list-style: none;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+.migas_pan li {
+  display: inline-block;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.migas_pan li a {
+  color: #2C82B8;
+}
+.migas_pan li a:hover {
+  color: #000;
+}
+
 #contenedor {
   display: grid;
   grid-template-columns: 100%;
@@ -500,7 +519,7 @@ h5 {
 }
 
 .contenido__desc {
-  margin: 50px 0 20px;
+  margin: 40px 0 20px;
 }
 .contenido__desc .ciego {
   visibility: collapse;
@@ -559,14 +578,19 @@ h5 {
   margin-bottom: 30px;
 }
 .contenido__desc--container h2 {
-  margin-bottom: 25px;
-}
-.contenido__desc--container h3 {
-  font-size: 1.65rem;
   margin-bottom: 15px;
 }
-.contenido__desc--container p {
+.contenido__desc--container h3 {
+  margin: 0 0 15px 15px;
+  color: #333;
+}
+.contenido__desc--container ul li {
   font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  font-weight: normal;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
 }
 
 .contenido__desc--info {
@@ -575,10 +599,39 @@ h5 {
 .contenido__desc--info article {
   margin-bottom: 25px;
 }
-.contenido__desc--info p {
-  text-align: justify;
+
+.contenido__desc--recs {
+  background-color: #2C82B8;
+  padding: 7px;
+}
+.contenido__desc--recs h3 {
+  margin: 0 0 15px 0;
+  color: #fff;
+}
+.contenido__desc--recs ul {
+  list-style-image: url(../img/flecha-derecha-blanca.png);
+  color: #fff;
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+.contenido__desc--recs ul li {
+  font-size: 1.125rem;
+  text-align: left;
   margin-bottom: 15px;
-  line-height: 1.35;
+  line-height: 1.3;
+  font-weight: normal;
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
+}
+.contenido__desc--recs ul li i {
+  font-size: 1.35rem;
+  margin-right: 5px;
+}
+.contenido__desc--recs ul li a {
+  color: #ededed;
+}
+.contenido__desc--recs ul li a:hover {
+  color: #FF99FF;
+  text-decoration: underline;
 }
 
 .contenido__desc--info,
@@ -592,18 +645,8 @@ h5 {
   text-align: justify;
 }
 
-.contenido__desc--recs,
 .contenido__desc--serv {
   padding: 10px;
-}
-
-.contenido__desc--recs {
-  background-color: #2C82B8;
-}
-.contenido__desc--recs h3,
-.contenido__desc--recs h4,
-.contenido__desc--recs p {
-  color: #fff;
 }
 
 .footer__links {
@@ -880,6 +923,7 @@ h5 {
   }
   .contenido__desc--info {
     width: 66%;
+    padding-right: 10px;
   }
   .contenido__desc--recs {
     width: 33%;
@@ -982,6 +1026,9 @@ h5 {
   .contenido__bienvenida--txt p {
     font-size: 1.35rem;
     line-height: 1.45;
+  }
+  .contenido__desc--container {
+    width: 90%;
   }
 }
 @media only screen and (min-width: 1400px) {

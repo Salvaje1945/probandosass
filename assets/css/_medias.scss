@@ -158,12 +158,9 @@
         line-height: map-get($num_dec, "1.35");
     }
 
-    // .contenido__desc--container {
-    //     max-width: map-get($wth_res, "pst_tbl");
-    // }
-
     .contenido__desc--info {
         width: map-get($per_cent, "3") * 22;
+        padding-right: 10px;
     }
 
     .contenido__desc--recs {
@@ -301,6 +298,10 @@
     .contenido__bienvenida--txt p {
         font-size: map-get($rel_lng, "1.35");
         line-height: map-get($num_dec, "1.45");
+    }
+
+    .contenido__desc--container {
+        width: 90%;
     }
 }
 
