@@ -7,7 +7,6 @@
 
 .contenido__bienvenida--txt {
     padding: map-get($abs_lng, "10px") * 2;
-    // background: linear-gradient(map-get($angles, "10°") * 18, map-get($color, "azul") map-get($per_cent, "0"), map-get($color, "rosa") map-get($per_cent, "100"));
     background-color: map-get($color, "rosa_02");
     width: map-get($per_cent, "100");
 
@@ -32,6 +31,10 @@
 .contenido__desc {
     @extend .flex-3;
     margin: map-get($abs_lng, "10px") * 4 map-get($num_int, "0") map-get($abs_lng, "10px") * 2;
+
+    // h2 {
+    //     margin-bottom: 15px;
+    // }
 
     .ciego {
         visibility: map-get($vis, "coll");
@@ -97,17 +100,79 @@
     }
 }
 
-.contenido__desc--container {
+ #servicios{
+    @extend .flex-7;
+}
+
+#sobremi,
+#servicios_desc {
     @extend .flex-6;
     margin-bottom: map-get($abs_lng, "10px") * 3;
+}
+
+.contenido__desc--container {
+
+    .contenido__desc--box {
+        @extend .col-3-2;
+
+        h3 {
+            margin-bottom: map-get($abs_lng, "10px");
+            color: inherit;
+            padding: 0 25px;
+
+            a {
+                color: inherit;
+                font-size: map-get($rel_lng, "1.40");
+                font-weight: 500;
+
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+    
+        p {
+            padding: map-get($num_int, "0") 25px;
+            color: inherit;
+            text-align: map-get($pos, "ctr");
+
+            a {
+                color: inherit;
+                font-size: map-get($rel_lng, "1.125");
+
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+    
+        .contenido__desc--box--img {
+            width: 301px;
+            height: 249px;
+            margin: 25px 25px map-get($abs_lng, "5px") * 3 25px;
+            overflow: map-get($vis, "no_vis");
+    
+            a {
+                img {
+                    width: 301px;
+                    height: 249px;
+                    transition: map-get($times, "seg");
+                    cursor: $cursor;
+                    border-radius: 10px;
+    
+                    &:hover {
+                        border-radius: 10px;
+                        transition: map-get($times, "seg");
+                        transform: scale(map-get($num_dec, "1.2"));
+                        
+                    }
+                }
+            }
+        }
+    }
 
     h2 {
         margin-bottom: 15px;
-    }
-
-    h3 {
-        margin: 0 0 15px 15px;
-        color: #333;
     }
     
     ul {
@@ -127,15 +192,40 @@
 .contenido__desc--info {
     margin-bottom: map-get($abs_lng, "5px") * 3;
 
+    h3 {
+        margin: 0 0 15px 15px;
+        color: #333;
+    }
+
+    h4 {
+        color: map-get($color, "azul");
+        font-size: 1.35rem;
+        font-weight: 500;
+    }
+
+    p,
+    article p {
+        font-size: 1.125rem;
+        text-align: map-get($pos, "lft");
+        margin-bottom: 15px;
+        line-height: 1.3;
+        font-weight: normal;
+        font-family: $fam_02;
+    }
+
     article {
         margin-bottom: 25px;
+
+        p {
+            margin-left: 15px;
+        }
     }
 
 }
 
 .contenido__desc--recs {
     background-color: map-get($color, "azul");
-    padding: map-get($abs_lng, "7px");
+    padding: map-get($abs_lng, "10px");
 
     h3 {
         margin: 0 0 15px 0;

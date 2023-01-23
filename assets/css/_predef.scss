@@ -22,7 +22,8 @@
 .flex-3,
 .flex-4,
 .flex-5,
-.flex-6 {
+.flex-6,
+.flex-7 {
     display: map-get($disp, "flex");
     flex-flow: map-get($flow, "flow_01");
 }
@@ -30,7 +31,8 @@
 .flex-1,
 .flex-2,
 .flex-3,
-.flex-4 {
+.flex-4,
+.flex-7 {
     width: map-get($per_cent, "100");
 }
 
@@ -44,11 +46,13 @@
     align-items: map-get($pos, "ctr");
 }
 
-.flex-6 {
+.flex-6,
+.flex-7 {
     align-items: map-get($pos, "f_str");
 }
 
-.flex-3 {
+.flex-3,
+.flex-7 {
     justify-content: map-get($pos, "spe_eve");
 }
 
@@ -76,6 +80,25 @@
     .flex-6 {
         flex-flow: map-get($flow, "flow_02");
     }
+
+    .flex-7 {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+    .flex-7 {
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    // .col-3-2 {
+    //     width: 401px;
+    //     height: map-get($glob_kw, "auto");
+    //     margin: 0 25px; 
+    //     padding: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") * 3;
+    //     text-align: map-get($pos, "ctr");
+    // }
 }
 
 // Cajas hijas
@@ -90,6 +113,29 @@
     padding: $padd_ed;
 }
 
+// .col-3-2 {
+//     width: map-get($abs_lng, "3px") * 117;
+//     height: map-get($glob_kw, "auto");
+//     margin: 0 25px; 
+//     padding: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") * 3;
+//     text-align: map-get($pos, "ctr");
+// }
+
+.col-3-2 {
+    width: map-get($abs_lng, "3px") * 117;
+    height: 525px;
+    border-radius: 10px;
+    background-color: map-get($color, "gris_02");
+    margin: 0 25px 50px 25px;
+    text-align: center;
+    color: map-get($color, "gris_05");
+
+    &:hover {
+        background-color: map-get($color, "azul");
+        color: map-get($color, "blanco");
+    }
+}
+
 // Efecto botones 1
 
 .btn-fx {
@@ -97,15 +143,13 @@
     color: map-get($color, "blanco");
     font-weight: map-get($glob_kw, "norm");
     text-align: map-get($pos, "ctr");
-    background-color: map-get($color, "azul");
+    background-color: map-get($color, "gris_03");
     border: map-get($abs_lng, "1px") $solid map-get($color, "gris_03");
     transition: map-get($times, "m_seg");
     cursor: $cursor;
 
     &:hover {
-        color: map-get($color, "negro");
-        font-weight: map-get($num_int, "100") * 6;
-        background-color: map-get($color, "rosa");
+        background-color: map-get($color, "azul");
         transition: map-get($times, "m_seg");
     }
 }

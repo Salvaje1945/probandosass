@@ -48,7 +48,7 @@
             font-size: map-get($rel_lng, "1");
 
             &:hover {
-                color: map-get($color, "rosa");
+                color: map-get($color, "rosa_02");
                 text-decoration: map-get($glob_kw, "none");
             }
         }
