@@ -1,4 +1,4 @@
-@use '_vars' as *;
+@use 'vars' as *;
 
 // Fila 100%
 
@@ -121,7 +121,7 @@
 //     text-align: map-get($pos, "ctr");
 // }
 
-.col-3-2 {
+.col-3_2 {
     width: map-get($abs_lng, "3px") * 117;
     height: 525px;
     border-radius: 10px;
@@ -133,6 +133,23 @@
     &:hover {
         background-color: map-get($color, "azul");
         color: map-get($color, "blanco");
+    }
+}
+
+.col-3_3 {
+    width: map-get($abs_lng, "3px") * 117;
+    min-height: 330px;
+    height: auto;
+    border-radius: 10px;
+    background-color: map-get($color, "azul");
+    margin: 0 0 30px 0;
+    padding: 10px 10px 0;
+    text-align: center;
+    color: map-get($color, "blanco");
+
+    &:hover {
+        background-color: map-get($color, "rosa_02");
+        color: map-get($color, "negro");
     }
 }
 

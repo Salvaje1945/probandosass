@@ -1,5 +1,5 @@
-@use '_vars' as *;
-@use '_predef' as *;
+@use 'vars' as *;
+@use 'predef' as *;
 
 .contenido__bienvenida {
     @extend .flex-4;
@@ -36,13 +36,22 @@
     //     margin-bottom: 15px;
     // }
 
-    .ciego {
-        visibility: map-get($vis, "coll");
-        width: map-get($abs_lng, "3px") * 117;
-        height: map-get($abs_lng, "1px");
-        padding: map-get($num_int, "0") !important;
-        margin: map-get($num_int, "0");
-    }
+    // .ciego {
+    //     visibility: map-get($vis, "coll");
+    //     width: map-get($abs_lng, "3px") * 117;
+    //     height: map-get($abs_lng, "1px");
+    //     padding: map-get($num_int, "0") !important;
+    //     margin: map-get($num_int, "0");
+    // }
+}
+
+.contenido__desc--ciego,
+.contenido__secciones--ciego {
+    visibility: map-get($vis, "coll");
+    width: map-get($abs_lng, "3px") * 117;
+    height: map-get($abs_lng, "1px");
+    padding: map-get($num_int, "0") !important;
+    margin: map-get($num_int, "0");
 }
 
 .contenido__desc--box {
@@ -100,20 +109,14 @@
     }
 }
 
- #servicios{
+ #servicios,
+ #recursos {
     @extend .flex-7;
 }
 
-#sobremi,
-#servicios_desc {
-    @extend .flex-6;
-    margin-bottom: map-get($abs_lng, "10px") * 3;
-}
-
-.contenido__desc--container {
-
+#servicios {
     .contenido__desc--box {
-        @extend .col-3-2;
+        @extend .col-3_2;
 
         h3 {
             margin-bottom: map-get($abs_lng, "10px");
@@ -170,6 +173,118 @@
             }
         }
     }
+}
+
+#recursos {
+    h2,
+    h3 {
+        width: 100%;
+        min-width: 351px;
+    }
+
+    h2 {
+        margin-left: 10px;
+    }
+
+    h3 {
+        margin-left: 15px;
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 1.40rem;
+    }
+
+    .contenido__desc--box {
+        @extend .col-3_3;
+
+        h4 {
+            color: inherit;
+
+            a {
+                color: inherit;
+                font-size: map-get($rel_lng, "1.30");
+                font-weight: 500;
+
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+    
+        .contenido__desc--box--vid {
+            // width: 301px;
+            border-radius: 10px;
+            height: 249px;
+            margin: 0 0 map-get($abs_lng, "10px") 0;
+        }
+    }
+}
+
+#sobremi,
+#servicios_desc {
+    @extend .flex-6;
+    margin-bottom: map-get($abs_lng, "10px") * 3;
+}
+
+.contenido__desc--container {
+
+    // .contenido__desc--box {
+    //     @extend .col-3_2;
+
+    //     h3 {
+    //         margin-bottom: map-get($abs_lng, "10px");
+    //         color: inherit;
+    //         padding: 0 25px;
+
+    //         a {
+    //             color: inherit;
+    //             font-size: map-get($rel_lng, "1.40");
+    //             font-weight: 500;
+
+    //             &:hover {
+    //                 color: inherit;
+    //             }
+    //         }
+    //     }
+    
+    //     p {
+    //         padding: map-get($num_int, "0") 25px;
+    //         color: inherit;
+    //         text-align: map-get($pos, "ctr");
+
+    //         a {
+    //             color: inherit;
+    //             font-size: map-get($rel_lng, "1.125");
+
+    //             &:hover {
+    //                 color: inherit;
+    //             }
+    //         }
+    //     }
+    
+    //     .contenido__desc--box--img {
+    //         width: 301px;
+    //         height: 249px;
+    //         margin: 25px 25px map-get($abs_lng, "5px") * 3 25px;
+    //         overflow: map-get($vis, "no_vis");
+    
+    //         a {
+    //             img {
+    //                 width: 301px;
+    //                 height: 249px;
+    //                 transition: map-get($times, "seg");
+    //                 cursor: $cursor;
+    //                 border-radius: 10px;
+    
+    //                 &:hover {
+    //                     border-radius: 10px;
+    //                     transition: map-get($times, "seg");
+    //                     transform: scale(map-get($num_dec, "1.2"));
+                        
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     h2 {
         margin-bottom: 15px;
