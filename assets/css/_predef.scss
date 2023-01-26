@@ -82,23 +82,15 @@
     }
 
     .flex-7 {
-        width: 90%;
+        width: map-get($per_cent, "100") - 10;
     }
 }
 
 @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
     .flex-7 {
-        justify-content: space-between;
-        width: 90%;
+        justify-content: map-get($pos, "spe_bet");
+        width: map-get($per_cent, "100") - 10;
     }
-
-    // .col-3-2 {
-    //     width: 401px;
-    //     height: map-get($glob_kw, "auto");
-    //     margin: 0 25px; 
-    //     padding: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") * 3;
-    //     text-align: map-get($pos, "ctr");
-    // }
 }
 
 // Cajas hijas
@@ -113,21 +105,13 @@
     padding: $padd_ed;
 }
 
-// .col-3-2 {
-//     width: map-get($abs_lng, "3px") * 117;
-//     height: map-get($glob_kw, "auto");
-//     margin: 0 25px; 
-//     padding: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") * 3;
-//     text-align: map-get($pos, "ctr");
-// }
-
 .col-3_2 {
     width: map-get($abs_lng, "3px") * 117;
-    height: 525px;
-    border-radius: 10px;
+    height: map-get($abs_lng, "25px") * 21;
+    border-radius: map-get($abs_lng, "10px");
     background-color: map-get($color, "gris_02");
-    margin: 0 25px 50px 25px;
-    text-align: center;
+    margin: map-get($num_int, "0") map-get($abs_lng, "25px") map-get($abs_lng, "50px") map-get($abs_lng, "25px");
+    text-align: map-get($pos, "ctr");
     color: map-get($color, "gris_05");
 
     &:hover {
@@ -138,13 +122,13 @@
 
 .col-3_3 {
     width: map-get($abs_lng, "3px") * 117;
-    min-height: 330px;
-    height: auto;
-    border-radius: 10px;
+    min-height: map-get($abs_lng, "10px") * 33;
+    height: map-get($glob_kw, "auto");
+    border-radius: map-get($abs_lng, "10px");
     background-color: map-get($color, "azul");
-    margin: 0 0 30px 0;
-    padding: 10px 10px 0;
-    text-align: center;
+    margin: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") *3 map-get($num_int, "0");
+    padding: map-get($abs_lng, "10px") map-get($abs_lng, "10px") map-get($num_int, "0");
+    text-align: map-get($pos, "ctr");
     color: map-get($color, "blanco");
 
     &:hover {
@@ -174,4 +158,73 @@
 @mixin btn-fx_edit ($fnt_sz: map-get($glob_kw, "auto")) {
     @extend .btn-fx;
     font-size: $fnt_sz;
+}
+
+// Youtube lite
+
+.youtube-player {
+    position: map-get($pos, "rel");
+    height: map-get($num_int, "0");
+    overflow: map-get($vis, "no_vis");
+    max-width: map-get($per_cent, "100");
+    background: map-get($color, "negro");
+
+    iframe {
+        position: map-get($pos, "abs");
+        top: map-get($num_int, "0");
+        left: map-get($num_int, "0");
+        width: map-get($per_cent, "100");
+        z-index: map-get($num_int, "100");
+        background: map-get($color, "trans");
+    }
+
+    img {
+        object-fit: cover;
+        display: map-get($disp, "blk");
+        left: map-get($num_int, "0");
+        bottom: map-get($num_int, "0");
+        margin: map-get($glob_kw, "auto");
+        max-width: map-get($per_cent, "100");
+        width: map-get($per_cent, "100");
+        position: map-get($pos, "abs");
+        right: map-get($num_int, "0");
+        top: map-get($num_int, "0");
+        border: map-get($glob_kw, "none");
+        cursor: $cursor;
+        -webkit-transition: map-get($times, "m_seg") all;
+        -moz-transition: map-get($times, "m_seg") all;
+        transition: map-get($times, "m_seg") all;
+
+        &:hover {
+            filter: brightness(map-get($per_cent, "100") - 25);
+        }
+    }
+
+    .play {
+        height: map-get($abs_lng, "3px") * 24;
+        width: map-get($abs_lng, "3px") * 24;
+        left: map-get($per_cent, "50");
+        top: map-get($per_cent, "50");
+        margin-left: - map-get($abs_lng, "3px") * 12;
+        margin-top: - map-get($abs_lng, "3px") * 12;
+        position: map-get($pos, "abs");
+        background: url('../img/yt_play.png') no-repeat;
+        cursor: $cursor;
+    }
+}
+
+@mixin yt-player ($vid_hgt: map-get($glob_kw, "auto")) {
+    @extend .youtube-player;
+
+    .youtube-player {
+        padding-bottom: $vid_hgt;
+
+        iframe {
+            height: $vid_hgt;
+        }
+
+        img {
+            height: $vid_hgt;
+        }
+    }
 }

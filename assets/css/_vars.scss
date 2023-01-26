@@ -1,13 +1,9 @@
-// Variables
-
 // ***GENERALES***
-
 // Tamaño fuente raíz
 
 $root_fsize: 16px !important;
 
 // 01 - ***VALORES GENERALES***
-
 // 01:A(1) - ***NÚMEROS GENÉRICOS*** 
 
 $num_int: (
@@ -50,7 +46,6 @@ $per_cent: (
 );
 
 // 01:A(3) ***DIMENSIONES***
-
 // 01:A(3-a) - Ángulos y tiempo
 
 $angles: (
@@ -127,7 +122,6 @@ $hgt_res: (
     "bkp_05": 655px,
 );
 
-
 $brk_pts: (
     "bp_01": 960px,
     "bp_02": 1023px,
@@ -140,6 +134,7 @@ $brk_pts: (
 // 01:B - ***COLORES*** 
 
 $color: (
+    "trans": transparent,
     "negro": #000,
     "gris_01": #333,
     "gris_02": #444,
@@ -164,6 +159,7 @@ $pos: (
     "rgt": right,
     "top": top,
     "bttm": bottom,
+    "mdl": middle,
     // Específica para textgo
     "jtf": justify,
     // Para cajas flexibles
@@ -192,7 +188,6 @@ $glob_kw: (
 );
 
 // 02 - ***VALORES PARA ELEMENTOS***
-
 // 02:A - ***DESPLIEGUE***
 
 $disp: (
@@ -201,7 +196,9 @@ $disp: (
     "blk_lin": inline-block,
     "grd": grid,
     "flex": flex,
-    "cnt": contents,  
+    "cnt": contents,
+    "tbl": table,
+    "tbl_cell": table-cell,  
 );
 
 // 02:B - ***FLUJO DE CAJAS FLEXIBLES***
@@ -222,21 +219,16 @@ $vis: (
 );
 
 // 03 - ***VALORES PARA FUENTES/TIPOGRAFÍAS***
-
 // 03:A - ***FAMILIAS***
 
 $fam_01: 'Oleo Script', cursive;
 $fam_02: 'Helvetica', 'Segoe UI', 'Tahoma', Geneva, 'Verdana', 'sans-serif';
 
-// .caca {
-//     font-family: helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-// }
-
 // 03:B - ***OTRAS***
 
 $mayusc: uppercase;
-
 $ital: italic;
+$udr_lne: underline;
 
 // 04 - ***OTRAS***
 

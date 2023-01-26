@@ -325,6 +325,52 @@ h5 {
   transition: 0.5s;
 }
 
+.youtube-player, .contenido__bienvenida--vid div, #recursos .contenido__desc--box .contenido__desc--box--vid {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+.youtube-player iframe, .contenido__bienvenida--vid div iframe, #recursos .contenido__desc--box .contenido__desc--box--vid iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+}
+.youtube-player img, .contenido__bienvenida--vid div img, #recursos .contenido__desc--box .contenido__desc--box--vid img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.youtube-player img:hover, .contenido__bienvenida--vid div img:hover, #recursos .contenido__desc--box .contenido__desc--box--vid img:hover {
+  filter: brightness(75%);
+}
+.youtube-player .play, .contenido__bienvenida--vid div .play, #recursos .contenido__desc--box .contenido__desc--box--vid .play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("../img/yt_play.png") no-repeat;
+  cursor: pointer;
+}
+
 .header__principal--menu ul,
 .header__carrousel,
 .header__portada,
@@ -428,7 +474,7 @@ h5 {
   height: 100vh;
 }
 .header__principal--menu ul li {
-  padding-top: 42px;
+  padding-top: 35px;
   color: #333;
   font-size: 1.45rem;
   font-weight: 600;
@@ -572,6 +618,18 @@ h5 {
   background-color: #2C82B8;
   width: 100%;
 }
+.contenido__bienvenida--vid div {
+  height: 450px;
+}
+.contenido__bienvenida--vid div .youtube-player, .contenido__bienvenida--vid div #recursos .contenido__desc--box .contenido__desc--box--vid, #recursos .contenido__desc--box .contenido__bienvenida--vid div .contenido__desc--box--vid, .contenido__bienvenida--vid div div {
+  padding-bottom: 450px;
+}
+.contenido__bienvenida--vid div .youtube-player iframe, .contenido__bienvenida--vid div #recursos .contenido__desc--box .contenido__desc--box--vid iframe, #recursos .contenido__desc--box .contenido__bienvenida--vid div .contenido__desc--box--vid iframe, .contenido__bienvenida--vid div div iframe {
+  height: 450px;
+}
+.contenido__bienvenida--vid div .youtube-player img, .contenido__bienvenida--vid div #recursos .contenido__desc--box .contenido__desc--box--vid img, #recursos .contenido__desc--box .contenido__bienvenida--vid div .contenido__desc--box--vid img, .contenido__bienvenida--vid div div img {
+  height: 450px;
+}
 
 .contenido__desc {
   margin: 40px 0 20px;
@@ -691,6 +749,7 @@ h5 {
 }
 #recursos .contenido__desc--box h4 {
   color: inherit;
+  margin-bottom: 0;
 }
 #recursos .contenido__desc--box h4 a {
   color: inherit;
@@ -704,6 +763,15 @@ h5 {
   border-radius: 10px;
   height: 249px;
   margin: 0 0 10px 0;
+}
+#recursos .contenido__desc--box .contenido__desc--box--vid .youtube-player, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__bienvenida--vid div, .contenido__bienvenida--vid #recursos .contenido__desc--box .contenido__desc--box--vid div, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__desc--box--vid {
+  padding-bottom: 249px;
+}
+#recursos .contenido__desc--box .contenido__desc--box--vid .youtube-player iframe, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__bienvenida--vid div iframe, .contenido__bienvenida--vid #recursos .contenido__desc--box .contenido__desc--box--vid div iframe, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__desc--box--vid iframe {
+  height: 249px;
+}
+#recursos .contenido__desc--box .contenido__desc--box--vid .youtube-player img, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__bienvenida--vid div img, .contenido__bienvenida--vid #recursos .contenido__desc--box .contenido__desc--box--vid div img, #recursos .contenido__desc--box .contenido__desc--box--vid .contenido__desc--box--vid img {
+  height: 249px;
 }
 
 #sobremi,
@@ -786,18 +854,9 @@ h5 {
 }
 
 .contenido__desc--info,
-.contenido__desc--recs,
-.contenido__desc--serv {
+.contenido__desc--recs {
   width: 100%;
   height: auto;
-}
-
-.contenido__desc--serv p {
-  text-align: justify;
-}
-
-.contenido__desc--serv {
-  padding: 10px;
 }
 
 .footer__links {
@@ -955,7 +1014,7 @@ h5 {
   }
   .header__principal--menu ul li,
 #iconos-resp {
-    padding-top: 4vh;
+    padding-top: 7px;
   }
 }
 @media only screen and (min-height: 360px) and (max-height: 599px) {
@@ -966,10 +1025,10 @@ h5 {
     font-size: 2.5rem;
   }
   .header__principal--menu ul li {
-    padding-top: 20px;
+    padding-top: 10px;
   }
   #iconos-resp {
-    padding-top: 25px;
+    padding-top: 20px;
   }
   .header__principal--menu ul {
     height: 600px;

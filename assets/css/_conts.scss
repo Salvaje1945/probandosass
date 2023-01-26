@@ -26,23 +26,16 @@
     padding: map-get($abs_lng, "10px");
     background-color: map-get($color, "azul");
     width: map-get($per_cent, "100");
+
+    div {
+        height: map-get($abs_lng, "50px") * 9;
+        @include yt-player ($vid_hgt: map-get($abs_lng, "50px") * 9);
+    }
 }
 
 .contenido__desc {
     @extend .flex-3;
     margin: map-get($abs_lng, "10px") * 4 map-get($num_int, "0") map-get($abs_lng, "10px") * 2;
-
-    // h2 {
-    //     margin-bottom: 15px;
-    // }
-
-    // .ciego {
-    //     visibility: map-get($vis, "coll");
-    //     width: map-get($abs_lng, "3px") * 117;
-    //     height: map-get($abs_lng, "1px");
-    //     padding: map-get($num_int, "0") !important;
-    //     margin: map-get($num_int, "0");
-    // }
 }
 
 .contenido__desc--ciego,
@@ -109,8 +102,8 @@
     }
 }
 
- #servicios,
- #recursos {
+#servicios,
+#recursos {
     @extend .flex-7;
 }
 
@@ -120,54 +113,53 @@
 
         h3 {
             margin-bottom: map-get($abs_lng, "10px");
-            color: inherit;
-            padding: 0 25px;
+            color: map-get($glob_kw, "inh");
+            padding: map-get($num_int, "0") map-get($abs_lng, "25px");
 
             a {
-                color: inherit;
+                color: map-get($glob_kw, "inh");
                 font-size: map-get($rel_lng, "1.40");
-                font-weight: 500;
+                font-weight: map-get($num_int, "100") * 5;
 
                 &:hover {
-                    color: inherit;
+                    color: map-get($glob_kw, "inh");
                 }
             }
         }
-    
+
         p {
-            padding: map-get($num_int, "0") 25px;
-            color: inherit;
+            padding: map-get($num_int, "0") map-get($abs_lng, "25px");
+            color: map-get($glob_kw, "inh");
             text-align: map-get($pos, "ctr");
 
             a {
-                color: inherit;
+                color: map-get($glob_kw, "inh");
                 font-size: map-get($rel_lng, "1.125");
 
                 &:hover {
-                    color: inherit;
+                    color: map-get($glob_kw, "inh");
                 }
             }
         }
-    
+
         .contenido__desc--box--img {
-            width: 301px;
-            height: 249px;
-            margin: 25px 25px map-get($abs_lng, "5px") * 3 25px;
+            width: map-get($abs_lng, "100px") * 3 + 1;
+            height: map-get($abs_lng, "50px") * 5 - 1;
+            margin: map-get($abs_lng, "25px") map-get($abs_lng, "25px") map-get($abs_lng, "5px") * 3 map-get($abs_lng, "25px");
             overflow: map-get($vis, "no_vis");
-    
+
             a {
                 img {
-                    width: 301px;
-                    height: 249px;
+                    width: map-get($abs_lng, "100px") * 3 + 1;
+                    height: map-get($abs_lng, "50px") * 5 - 1;
                     transition: map-get($times, "seg");
                     cursor: $cursor;
-                    border-radius: 10px;
-    
+                    border-radius: map-get($abs_lng, "10px");
+
                     &:hover {
-                        border-radius: 10px;
+                        border-radius: map-get($abs_lng, "10px");
                         transition: map-get($times, "seg");
                         transform: scale(map-get($num_dec, "1.2"));
-                        
                     }
                 }
             }
@@ -176,45 +168,48 @@
 }
 
 #recursos {
+
     h2,
     h3 {
-        width: 100%;
-        min-width: 351px;
+        width: map-get($per_cent, "100");
+        min-width: map-get($abs_lng, "3px") * 117;
     }
 
     h2 {
-        margin-left: 10px;
+        margin-left: map-get($abs_lng, "10px");
     }
 
     h3 {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        color: #333;
-        font-size: 1.40rem;
+        margin-left: map-get($abs_lng, "5px") * 3;
+        margin-bottom: map-get($abs_lng, "5px") * 3;
+        color: map-get($color, "gris_01");
+        font-size: map-get($rel_lng, "1.40");
     }
 
     .contenido__desc--box {
         @extend .col-3_3;
 
         h4 {
-            color: inherit;
+            color: map-get($glob_kw, "inh");
+            margin-bottom: map-get($num_int, "0");
 
             a {
-                color: inherit;
+                color: map-get($glob_kw, "inh");
                 font-size: map-get($rel_lng, "1.30");
-                font-weight: 500;
+                font-weight: map-get($num_int, "100") * 5;
 
                 &:hover {
-                    color: inherit;
+                    color: map-get($glob_kw, "inh");
                 }
             }
         }
-    
+
         .contenido__desc--box--vid {
-            // width: 301px;
-            border-radius: 10px;
-            height: 249px;
-            margin: 0 0 map-get($abs_lng, "10px") 0;
+            border-radius: map-get($abs_lng, "10px");
+            height: map-get($abs_lng, "50px") * 5 - 1;
+            margin: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "10px") map-get($num_int, "0");
+
+            @include yt-player ($vid_hgt: map-get($abs_lng, "50px") * 5 - 1);
         }
     }
 }
@@ -226,113 +221,52 @@
 }
 
 .contenido__desc--container {
-
-    // .contenido__desc--box {
-    //     @extend .col-3_2;
-
-    //     h3 {
-    //         margin-bottom: map-get($abs_lng, "10px");
-    //         color: inherit;
-    //         padding: 0 25px;
-
-    //         a {
-    //             color: inherit;
-    //             font-size: map-get($rel_lng, "1.40");
-    //             font-weight: 500;
-
-    //             &:hover {
-    //                 color: inherit;
-    //             }
-    //         }
-    //     }
-    
-    //     p {
-    //         padding: map-get($num_int, "0") 25px;
-    //         color: inherit;
-    //         text-align: map-get($pos, "ctr");
-
-    //         a {
-    //             color: inherit;
-    //             font-size: map-get($rel_lng, "1.125");
-
-    //             &:hover {
-    //                 color: inherit;
-    //             }
-    //         }
-    //     }
-    
-    //     .contenido__desc--box--img {
-    //         width: 301px;
-    //         height: 249px;
-    //         margin: 25px 25px map-get($abs_lng, "5px") * 3 25px;
-    //         overflow: map-get($vis, "no_vis");
-    
-    //         a {
-    //             img {
-    //                 width: 301px;
-    //                 height: 249px;
-    //                 transition: map-get($times, "seg");
-    //                 cursor: $cursor;
-    //                 border-radius: 10px;
-    
-    //                 &:hover {
-    //                     border-radius: 10px;
-    //                     transition: map-get($times, "seg");
-    //                     transform: scale(map-get($num_dec, "1.2"));
-                        
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
     h2 {
-        margin-bottom: 15px;
+        margin-bottom: map-get($abs_lng, "5px") * 3;
     }
-    
+
     ul {
 
         li {
-            font-size: 1.125rem;
+            font-size: map-get($rel_lng, "1.125");
             text-align: map-get($pos, "lft");
-            margin-bottom: 15px;
-            line-height: 1.3;
-            font-weight: normal;
+            margin-bottom: map-get($abs_lng, "5px") * 3;
+            line-height: map-get($num_dec, "1.3");
+            font-weight: map-get($glob_kw, "norm");
             font-family: $fam_02;
         }
     }
-
 }
 
 .contenido__desc--info {
     margin-bottom: map-get($abs_lng, "5px") * 3;
 
     h3 {
-        margin: 0 0 15px 15px;
-        color: #333;
+        margin: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "5px") * 3 map-get($abs_lng, "5px") * 3;
+        color: map-get($color, "gris_01");
     }
 
     h4 {
         color: map-get($color, "azul");
-        font-size: 1.35rem;
-        font-weight: 500;
+        font-size: map-get($rel_lng, "1.35");
+        font-weight: map-get($num_int, "100") * 5;
     }
 
     p,
     article p {
-        font-size: 1.125rem;
+        font-size: map-get($rel_lng, "1.125");
         text-align: map-get($pos, "lft");
-        margin-bottom: 15px;
-        line-height: 1.3;
-        font-weight: normal;
+        margin-bottom: map-get($abs_lng, "5px") * 3;
+        line-height: map-get($num_dec, "1.3");
+        font-weight: map-get($glob_kw, "norm");
         font-family: $fam_02;
     }
 
     article {
-        margin-bottom: 25px;
+        margin-bottom: map-get($abs_lng, "25px");
 
         p {
-            margin-left: 15px;
+            margin-left: map-get($abs_lng, "5px") * 3;
         }
     }
 
@@ -343,26 +277,26 @@
     padding: map-get($abs_lng, "10px");
 
     h3 {
-        margin: 0 0 15px 0;
+        margin: map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "5px") * 3 map-get($num_int, "0");
         color: map-get($color, "blanco");
     }
 
     ul {
         list-style-image: url(../img/flecha-derecha-blanca.png);
         color: map-get($color, "blanco");
-        margin: 0;
-        padding: 0 0 0 25px;
+        margin: map-get($num_int, "0");
+        padding: map-get($num_int, "0") map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "25px");
 
         li {
-            font-size: 1.125rem;
+            font-size: map-get($rel_lng, "1.125");
             text-align: map-get($pos, "lft");
-            margin-bottom: 15px;
-            line-height: 1.3;
-            font-weight: normal;
+            margin-bottom: map-get($abs_lng, "5px") * 3;
+            line-height: map-get($num_dec, "1.3");
+            font-weight: map-get($glob_kw, "norm");
             font-family: $fam_02;
 
             i {
-                font-size: 1.35rem;
+                font-size: map-get($rel_lng, "1.35");
                 margin-right: map-get($abs_lng, "5px");
             }
 
@@ -372,31 +306,15 @@
 
                 &:hover {
                     color: map-get($color, "rosa");
-                    text-decoration: underline;
+                    text-decoration: $udr_lne;
                 }
             }
-
-
         }
     }
-
 }
 
 .contenido__desc--info,
-.contenido__desc--recs,
-.contenido__desc--serv {
+.contenido__desc--recs {
     width: map-get($per_cent, "100");
     height: map-get($glob_kw, "auto");
 }
-
-.contenido__desc--serv {
-
-    p {
-        text-align: map-get($pos, "jtf");
-    }
-}
-
-.contenido__desc--serv {
-    padding: map-get($abs_lng, "10px");
-}
-

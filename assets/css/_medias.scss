@@ -4,6 +4,7 @@
 @media only screen and (max-height: map-get($hgt_res, "bkp_01")) {
     .header__principal--menu ul li {
         font-size: map-get($rel_lng, "1");
+        
     }
 
     .header__principal--menu ul li i {
@@ -12,7 +13,7 @@
 
     .header__principal--menu ul li,
     #iconos-resp {
-        padding-top: $vh_4;
+        padding-top: map-get($abs_lng, "7px");
     }
 }
 
@@ -26,11 +27,11 @@
     }
 
     .header__principal--menu ul li {
-        padding-top: map-get($abs_lng, "10px") * 2;
+        padding-top: map-get($abs_lng, "10px");
     }
 
     #iconos-resp {
-        padding-top: map-get($abs_lng, "25px");
+        padding-top: map-get($abs_lng, "10px") * 2;
     }
 
     .header__principal--menu ul {
@@ -56,7 +57,6 @@
     .contenido__bienvenida--vid {
         width: map-get($per_cent, "50");
     }
-
 }
 
 @media only screen and (max-width: map-get($brk_pts, "bp_02")) {
@@ -153,9 +153,10 @@
     }
 
     #recursos {
+
         h2,
         h3 {
-            margin-left: 0;
+            margin-left: map-get($num_int, "0");
         }
     }
 
@@ -167,7 +168,7 @@
 
     .contenido__desc--info {
         width: map-get($per_cent, "3") * 22;
-        padding-right: 10px;
+        padding-right: map-get($abs_lng, "10px");
     }
 
     .contenido__desc--recs {
@@ -192,11 +193,11 @@
     }
 
     .footer__links div:first-child {
-        align-self:center;
+        align-self: map-get($pos, "ctr");
     }
 
     .footer__links--box {
-        
+
         h1,
         h2 {
             color: map-get($color, "gris_04");
@@ -212,11 +213,11 @@
             font-family: $fam_01;
             font-size: map-get($rel_lng, "1.875");
         }
-        
+
         p {
             padding-right: map-get($abs_lng, "10px");
         }
-    
+
     }
 
     .footer__links--box--form ul {
@@ -257,7 +258,6 @@
     .header__principal--container,
     .contenido__desc--container {
         min-width: map-get($wth_res, "dkp_01");
-        // width: map-get($glob_kw, "auto");
     }
 
     .header__principal--logo {
@@ -286,11 +286,6 @@
         font-size: map-get($rel_lng, "1.35");
         line-height: map-get($num_dec, "1.45");
     }
-    
-    // .contenido__desc--info p,
-    // .contenido__desc--serv p {
-    //     font-size: map-get($rel_lng, "1.125");
-    // }
 }
 
 @media only screen and (min-width: map-get($wth_res, "dkp_02")) {
@@ -312,7 +307,7 @@
     }
 
     .contenido__desc--container {
-        width: 90%;
+        width: map-get($per_cent, "100") - 10;
     }
 }
 

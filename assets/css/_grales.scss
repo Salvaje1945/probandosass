@@ -72,7 +72,6 @@ h4 {
     font-size: map-get($rel_lng, "1");
 }
 
-
 h5 {
     color: map-get($color, "gris_03");
     font-size: map-get($rel_lng, "0.9");
@@ -85,17 +84,17 @@ h5 {
 }
 
 .migas_pan {
-    list-style: none;
-    margin: 0 0 0 15px;
-    padding: 0;
+    list-style: map-get($glob_kw, "none");
+    margin: map-get($num_int, "0") map-get($num_int, "0") map-get($num_int, "0") map-get($abs_lng, "5px") * 3;
+    padding: map-get($num_int, "0");
 
     li {
-        display: inline-block;
+        display: map-get($disp, "blk_lin");
         font-family: $fam_02;
         color: map-get($color, "gris_01");
         font-size: map-get($rel_lng, "1");
-        font-weight: normal;
-        
+        font-weight: map-get($glob_kw, "norm");
+
         a {
             color: map-get($color, "azul");
 
